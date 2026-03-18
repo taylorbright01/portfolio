@@ -3,447 +3,403 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Taylor Bright — Commercial Growth Leader</title>
+<title>Taylor Bright — Commercial Growth &amp; Operations</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg:      #0c0d0f;
-    --surface: #141618;
-    --border:  #1f2228;
-    --orange:  #f4720a;
-    --teal:    #19c9b8;
-    --text:    #e6e8ed;
-    --muted:   #5a6070;
-    --soft:    #9099aa;
+    --bg:       #0a0b0d;
+    --surface:  #111316;
+    --surface2: #16191e;
+    --border:   #1e2229;
+    --border2:  #272d36;
+    --orange:   #f0700a;
+    --o-lo:     rgba(240,112,10,0.08);
+    --teal:     #17c5b4;
+    --t-lo:     rgba(23,197,180,0.07);
+    --text:     #e4e7ed;
+    --muted:    #52596a;
+    --soft:     #8892a4;
   }
-
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body { background: var(--bg); color: var(--text); font-family: 'Outfit', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+  body::before { content: ''; position: fixed; inset: 0; z-index: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E"); pointer-events: none; opacity: 0.5; }
 
   /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 1.4rem 5vw;
-    background: rgba(12,13,15,0.92);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-logo { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 1rem; letter-spacing: 0.06em; color: var(--text); text-decoration: none; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 1.3rem 5vw; background: rgba(10,11,13,0.9); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); }
+  .nav-logo { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.98rem; letter-spacing: 0.05em; color: var(--text); text-decoration: none; }
   .nav-logo span { color: var(--orange); }
-  .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
-  .nav-links a { font-size: 0.78rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--soft); text-decoration: none; transition: color 0.2s; }
+  .nav-links { display: flex; align-items: center; gap: 2.8rem; list-style: none; }
+  .nav-links a { font-size: 0.75rem; font-weight: 400; letter-spacing: 0.13em; text-transform: uppercase; color: var(--soft); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: var(--text); }
-  .nav-hire { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.76rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bg); background: var(--orange); padding: 0.6rem 1.5rem; border-radius: 2px; text-decoration: none; transition: opacity 0.2s; }
-  .nav-hire:hover { opacity: 0.85; }
+  .nav-cta { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.73rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bg); background: var(--orange); padding: 0.58rem 1.5rem; border-radius: 2px; text-decoration: none; transition: opacity 0.2s; }
+  .nav-cta:hover { opacity: 0.86; }
 
   /* HERO */
-  #hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 68px; }
+  #hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 66px; position: relative; z-index: 1; }
+  .hero-photo { position: relative; overflow: hidden; min-height: 88vh; background: var(--surface); }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 55% top; display: block; }
+  .hero-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(10,11,13,0) 38%, var(--bg) 100%), linear-gradient(to top, var(--bg) 0%, rgba(10,11,13,0) 22%); pointer-events: none; }
+  .photo-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 2px; z-index: 2; background: linear-gradient(90deg, var(--orange), var(--teal)); }
+  .hero-copy { display: flex; flex-direction: column; justify-content: center; padding: 5rem 5.5vw 5rem 3.5vw; position: relative; }
+  .hero-copy::before { content: ''; position: absolute; left: 0; top: 12%; bottom: 12%; width: 1px; background: linear-gradient(180deg, transparent, var(--teal) 35%, var(--orange) 75%, transparent); opacity: 0.2; }
+  .creds { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2.4rem; opacity: 0; animation: up 0.65s 0.15s forwards; }
+  .cred { display: flex; align-items: center; gap: 0.7rem; font-size: 0.72rem; font-weight: 400; letter-spacing: 0.09em; text-transform: uppercase; color: var(--soft); }
+  .pip { width: 4px; height: 4px; border-radius: 50%; flex-shrink: 0; background: var(--orange); }
+  .pip.t { background: var(--teal); }
+  .hero-block { opacity: 0; animation: up 0.65s 0.3s forwards; }
+  .hero-pre { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.7rem; }
+  .hero-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 5vw, 4.8rem); font-weight: 600; line-height: 0.98; color: var(--text); margin-bottom: 0.4rem; }
+  .hero-role { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.1rem, 2vw, 1.6rem); font-weight: 400; font-style: italic; color: var(--orange); margin-bottom: 1.8rem; }
+  .hero-summary { font-size: 0.95rem; font-weight: 300; color: var(--soft); line-height: 1.82; max-width: 460px; margin-bottom: 2.4rem; }
+  .hero-summary strong { color: var(--text); font-weight: 500; }
+  .hero-stats { display: flex; gap: 2.2rem; margin-bottom: 2.4rem; padding-bottom: 2.4rem; border-bottom: 1px solid var(--border); opacity: 0; animation: up 0.65s 0.48s forwards; }
+  .stat-n { font-family: 'Cormorant Garamond', serif; font-size: 2.1rem; font-weight: 600; color: var(--orange); line-height: 1; display: block; }
+  .stat-l { font-size: 0.62rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; display: block; }
+  .hero-ctas { display: flex; gap: 0.9rem; opacity: 0; animation: up 0.65s 0.62s forwards; }
+  .btn-fill { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; background: var(--orange); color: var(--bg); padding: 0.88rem 2.1rem; border-radius: 2px; text-decoration: none; transition: opacity 0.2s, transform 0.2s; }
+  .btn-fill:hover { opacity: 0.86; transform: translateY(-1px); }
+  .btn-line { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; background: transparent; color: var(--text); border: 1px solid var(--border2); padding: 0.88rem 2.1rem; border-radius: 2px; text-decoration: none; transition: border-color 0.2s, transform 0.2s; }
+  .btn-line:hover { border-color: var(--soft); transform: translateY(-1px); }
 
-  .hero-photo-col {
-    position: relative; overflow: hidden; min-height: 88vh;
-    background: var(--surface);
-  }
-  .hero-photo-col img {
-    width: 100%; height: 100%;
-    object-fit: cover; object-position: 55% top;
-    display: block;
-  }
-  .hero-photo-col::after {
-    content: ''; position: absolute; inset: 0;
-    background:
-      linear-gradient(to right, transparent 50%, var(--bg) 100%),
-      linear-gradient(to top, var(--bg) 0%, transparent 25%);
-    pointer-events: none;
-  }
-  .accent-bar {
-    position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
-    background: linear-gradient(90deg, var(--orange), var(--teal));
-    z-index: 2;
-  }
+  /* STRIP */
+  #strip { position: relative; z-index: 1; display: flex; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surface); }
+  .strip-item { flex: 1; padding: 1.5rem 2.5vw; border-right: 1px solid var(--border); display: flex; flex-direction: column; gap: 0.2rem; }
+  .strip-item:last-child { border-right: none; }
+  .strip-label { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); }
+  .strip-value { font-size: 0.82rem; color: var(--soft); }
 
-  .hero-copy-col {
-    display: flex; flex-direction: column; justify-content: center;
-    padding: 5rem 5vw 5rem 3.5vw;
-    position: relative;
-  }
-  .hero-copy-col::before {
-    content: ''; position: absolute; left: 0; top: 10%; bottom: 10%;
-    width: 1px;
-    background: linear-gradient(180deg, transparent, var(--teal) 40%, var(--orange) 80%, transparent);
-    opacity: 0.25;
-  }
+  /* TWO-COL LAYOUT */
+  .two-col { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1.55fr; border-top: 1px solid var(--border); }
+  .left-col { padding: 6rem 4vw; border-right: 1px solid var(--border); display: flex; flex-direction: column; gap: 2.2rem; }
+  .right-col { padding: 6rem 5vw; }
+  .eyebrow { font-size: 0.63rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); }
+  .col-num { font-family: 'Cormorant Garamond', serif; font-size: 6rem; font-weight: 600; color: var(--border2); line-height: 1; }
+  .col-h { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 2.8vw, 2.6rem); font-weight: 600; line-height: 1.12; color: var(--text); }
+  .col-h em { font-style: italic; color: var(--orange); }
 
-  .credentials { display: flex; flex-direction: column; gap: 0.55rem; margin-bottom: 2.2rem; opacity: 0; animation: fadeUp 0.6s 0.2s forwards; }
-  .cred-item { display: flex; align-items: center; gap: 0.7rem; }
-  .cred-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
-  .cred-text { font-size: 0.74rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--soft); }
+  /* PROSE */
+  .prose h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3vw, 2.9rem); font-weight: 600; line-height: 1.1; color: var(--text); margin-bottom: 1.8rem; }
+  .prose h2 em { font-style: italic; color: var(--orange); }
+  .prose p { font-size: 0.95rem; color: var(--soft); line-height: 1.88; margin-bottom: 1.2rem; }
+  .prose p:last-child { margin-bottom: 0; }
+  .prose p strong { color: var(--text); font-weight: 500; }
+  .pull { margin-top: 2.8rem; padding: 2rem 2.2rem; background: var(--surface); border-left: 2px solid var(--orange); }
+  .pull p { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-style: italic; color: var(--text); line-height: 1.7; margin-bottom: 0.6rem; }
+  .pull span { font-size: 0.63rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); }
 
-  .hero-headline { opacity: 0; animation: fadeUp 0.6s 0.35s forwards; }
-  .hero-pre { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.7rem; }
-  .hero-name { font-family: 'Playfair Display', serif; font-size: clamp(2.6rem, 4vw, 4rem); font-weight: 700; line-height: 1.05; color: var(--text); margin-bottom: 0.3rem; }
-  .hero-role { font-family: 'Playfair Display', serif; font-size: clamp(1rem, 1.8vw, 1.45rem); font-weight: 400; font-style: italic; color: var(--orange); margin-bottom: 1.6rem; }
-  .hero-body { font-size: 0.95rem; font-weight: 300; color: var(--soft); line-height: 1.8; max-width: 460px; margin-bottom: 2.2rem; }
-  .hero-body strong { color: var(--text); font-weight: 500; }
+  /* METRICS */
+  #metrics { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4,1fr); border-top: 1px solid var(--border); }
+  .metric { padding: 3rem 2.5vw; border-right: 1px solid var(--border); display: flex; flex-direction: column; gap: 0.55rem; transition: background 0.3s; }
+  .metric:last-child { border-right: none; }
+  .metric:hover { background: var(--surface); }
+  .metric-n { font-family: 'Cormorant Garamond', serif; font-size: 3.2rem; font-weight: 600; color: var(--orange); line-height: 1; }
+  .metric-l { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
+  .metric-d { font-size: 0.8rem; color: var(--soft); line-height: 1.55; }
 
-  .hero-stats { display: flex; gap: 2rem; margin-bottom: 2.2rem; padding-bottom: 2.2rem; border-bottom: 1px solid var(--border); opacity: 0; animation: fadeUp 0.6s 0.5s forwards; }
-  .stat-n { font-family: 'Playfair Display', serif; font-size: 1.9rem; font-weight: 700; color: var(--orange); line-height: 1; display: block; }
-  .stat-l { font-size: 0.65rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; display: block; }
-
-  .hero-actions { display: flex; gap: 1rem; opacity: 0; animation: fadeUp 0.6s 0.65s forwards; }
-  .btn-solid { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--orange); color: var(--bg); padding: 0.85rem 2rem; border-radius: 2px; text-decoration: none; transition: opacity 0.2s, transform 0.2s; }
-  .btn-solid:hover { opacity: 0.88; transform: translateY(-1px); }
-  .btn-ghost { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; background: transparent; color: var(--text); border: 1px solid var(--border); padding: 0.85rem 2rem; border-radius: 2px; text-decoration: none; transition: border-color 0.2s, transform 0.2s; }
-  .btn-ghost:hover { border-color: var(--soft); transform: translateY(-1px); }
-
-  /* ABOUT */
-  #about { display: grid; grid-template-columns: 1fr 1.5fr; border-top: 1px solid var(--border); }
-  .label-col { padding: 6rem 4vw; border-right: 1px solid var(--border); display: flex; flex-direction: column; gap: 2.5rem; }
-  .section-eyebrow { font-size: 0.66rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); }
-  .section-num { font-family: 'Playfair Display', serif; font-size: 5rem; font-weight: 700; color: var(--border); line-height: 1; }
-  .section-h { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 2.6vw, 2.5rem); font-weight: 700; line-height: 1.15; color: var(--text); margin-top: 0.5rem; }
-  .section-h em { font-style: italic; color: var(--orange); }
-
-  .content-col { padding: 6rem 5vw; }
-  .content-col p { font-size: 0.95rem; color: var(--soft); line-height: 1.85; margin-bottom: 1.2rem; }
-  .content-col p strong { color: var(--text); font-weight: 500; }
-  .content-col h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.9rem, 2.8vw, 2.7rem); font-weight: 700; line-height: 1.12; color: var(--text); margin-bottom: 1.8rem; }
-  .content-col h2 em { font-style: italic; color: var(--orange); }
-
-  .pull-quote { margin-top: 2.5rem; padding: 1.8rem 2rem; background: var(--surface); border-left: 3px solid var(--orange); }
-  .pull-quote p { font-family: 'Playfair Display', serif; font-size: 1.02rem; font-style: italic; color: var(--text); line-height: 1.7; margin-bottom: 0.7rem; }
-  .pull-quote span { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); }
-
-  /* EXPERIENCE */
-  #experience { display: grid; grid-template-columns: 1fr 1.5fr; border-top: 1px solid var(--border); }
-
-  .roles-col { padding: 6rem 5vw; }
-  .role-block { padding: 2.5rem 0; border-bottom: 1px solid var(--border); }
-  .role-block:first-child { padding-top: 0; }
-  .role-block:last-child { border-bottom: none; padding-bottom: 0; }
-  .role-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.35rem; }
-  .role-company { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--text); }
-  .role-period { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); white-space: nowrap; padding-top: 0.3rem; }
-  .role-title { font-size: 0.76rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); margin-bottom: 1rem; }
+  /* ROLES */
+  .roles { display: flex; flex-direction: column; }
+  .role { padding: 2.8rem 0; border-bottom: 1px solid var(--border); }
+  .role:first-child { padding-top: 0; }
+  .role:last-child { border-bottom: none; padding-bottom: 0; }
+  .role-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; margin-bottom: 0.3rem; }
+  .role-co { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; color: var(--text); }
+  .role-date { font-size: 0.67rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); white-space: nowrap; padding-top: 0.35rem; }
+  .role-title { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: var(--orange); margin-bottom: 1rem; }
+  .role-body { font-size: 0.88rem; color: var(--soft); line-height: 1.72; margin-bottom: 1rem; }
+  .role-body strong { color: var(--text); font-weight: 500; }
   .role-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
-  .role-bullets li { font-size: 0.88rem; color: var(--soft); padding-left: 1rem; position: relative; line-height: 1.65; }
-  .role-bullets li::before { content: ''; position: absolute; left: 0; top: 0.72em; width: 4px; height: 1px; background: var(--teal); }
+  .role-bullets li { font-size: 0.87rem; color: var(--soft); padding-left: 1.1rem; position: relative; line-height: 1.65; }
+  .role-bullets li::before { content: ''; position: absolute; left: 0; top: 0.72em; width: 5px; height: 1px; background: var(--teal); }
   .role-bullets li strong { color: var(--text); font-weight: 500; }
+  .proj-links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.2rem; }
+  .proj-link { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); border: 1px solid rgba(23,197,180,0.2); background: var(--t-lo); padding: 0.38rem 0.9rem; border-radius: 2px; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
+  .proj-link:hover { border-color: var(--teal); background: rgba(23,197,180,0.13); }
+  .proj-link svg { width: 10px; height: 10px; }
+  .yt-link { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); border: 1px solid rgba(240,112,10,0.2); background: var(--o-lo); padding: 0.38rem 0.9rem; border-radius: 2px; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
+  .yt-link:hover { border-color: var(--orange); background: rgba(240,112,10,0.14); }
+  .yt-link svg { width: 10px; height: 10px; }
 
-  /* IMPACT */
-  #impact { display: grid; grid-template-columns: repeat(4,1fr); border-top: 1px solid var(--border); }
-  .impact-item { padding: 3rem 2.2rem; border-right: 1px solid var(--border); display: flex; flex-direction: column; gap: 0.55rem; }
-  .impact-item:last-child { border-right: none; }
-  .impact-n { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 700; color: var(--orange); line-height: 1; }
-  .impact-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
-  .impact-sub { font-size: 0.8rem; color: var(--soft); line-height: 1.55; }
-
-  /* SKILLS */
-  #skills { display: grid; grid-template-columns: 1fr 1.5fr; border-top: 1px solid var(--border); }
-  .skills-grid { padding: 6rem 5vw; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); align-content: start; }
-  .skill-cell { background: var(--bg); padding: 1.8rem; transition: background 0.25s; }
-  .skill-cell:hover { background: var(--surface); }
-  .skill-cell h3 { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; color: var(--text); margin-bottom: 0.65rem; }
-  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-  .skill-tag { font-size: 0.63rem; letter-spacing: 0.08em; color: var(--muted); border: 1px solid var(--border); padding: 0.2rem 0.55rem; border-radius: 1px; }
+  /* CAPABILITIES */
+  .caps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); align-content: start; }
+  .cap { background: var(--bg); padding: 2rem; transition: background 0.25s; }
+  .cap:hover { background: var(--surface); }
+  .cap h3 { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; color: var(--text); margin-bottom: 0.6rem; }
+  .cap p { font-size: 0.84rem; color: var(--soft); line-height: 1.65; }
+  .cap-tag { display: inline-block; margin-top: 0.9rem; font-size: 0.6rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--border); padding: 0.18rem 0.55rem; border-radius: 1px; }
 
   /* CONTACT */
-  #contact { display: grid; grid-template-columns: 1.5fr 1fr; border-top: 1px solid var(--border); }
+  #contact { position: relative; z-index: 1; display: grid; grid-template-columns: 1.5fr 1fr; border-top: 1px solid var(--border); }
   .contact-left { padding: 7rem 5vw; border-right: 1px solid var(--border); }
-  .contact-left h2 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.2vw, 3.2rem); font-weight: 700; line-height: 1.1; color: var(--text); margin: 1rem 0 1.4rem; }
+  .contact-left h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 3.5vw, 3.8rem); font-weight: 600; line-height: 1.05; color: var(--text); margin: 1rem 0 1.5rem; }
   .contact-left h2 em { font-style: italic; color: var(--orange); }
-  .contact-left p { font-size: 0.95rem; color: var(--soft); line-height: 1.8; max-width: 460px; margin-bottom: 2.2rem; }
-  .contact-links { display: flex; flex-direction: column; gap: 0.75rem; }
-  .contact-link { display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.4rem; background: var(--surface); border: 1px solid var(--border); border-radius: 2px; text-decoration: none; color: var(--text); transition: border-color 0.25s, transform 0.2s; max-width: 420px; }
-  .contact-link:hover { border-color: var(--orange); transform: translateX(4px); }
-  .cl-icon { width: 17px; height: 17px; color: var(--orange); flex-shrink: 0; }
-  .cl-label { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.1rem; }
-  .cl-value { font-size: 0.86rem; color: var(--text); }
-
-  .contact-right { padding: 7rem 4vw; display: flex; flex-direction: column; justify-content: center; gap: 1.8rem; }
-  .avail-badge { display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid rgba(25,201,184,0.25); background: rgba(25,201,184,0.06); padding: 0.5rem 1rem; border-radius: 2px; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); width: fit-content; }
-  .avail-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); animation: blink 2s infinite; }
-  .contact-big { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 2.3vw, 2.1rem); font-weight: 700; color: var(--text); line-height: 1.25; }
+  .contact-left p { font-size: 0.93rem; color: var(--soft); line-height: 1.82; max-width: 440px; margin-bottom: 2.4rem; }
+  .c-links { display: flex; flex-direction: column; gap: 0.7rem; }
+  .c-link { display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.4rem; background: var(--surface); border: 1px solid var(--border); border-radius: 2px; text-decoration: none; color: var(--text); transition: border-color 0.22s, transform 0.2s; max-width: 430px; }
+  .c-link:hover { border-color: var(--orange); transform: translateX(4px); }
+  .c-icon { width: 16px; height: 16px; color: var(--orange); flex-shrink: 0; }
+  .c-label { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.1rem; }
+  .c-value { font-size: 0.86rem; color: var(--text); }
+  .contact-right { padding: 7rem 4.5vw; display: flex; flex-direction: column; justify-content: center; gap: 2rem; }
+  .avail { display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid rgba(23,197,180,0.22); background: var(--t-lo); padding: 0.5rem 1rem; border-radius: 2px; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); width: fit-content; }
+  .avail-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--teal); animation: blink 2s infinite; }
+  .contact-big { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.7rem, 2.6vw, 2.4rem); font-weight: 600; color: var(--text); line-height: 1.2; }
   .contact-big span { color: var(--orange); }
-  .contact-note { font-size: 0.83rem; color: var(--muted); line-height: 1.7; }
+  .contact-note { font-size: 0.82rem; color: var(--muted); line-height: 1.72; }
 
   /* FOOTER */
-  footer { border-top: 1px solid var(--border); padding: 1.8rem 5vw; display: flex; justify-content: space-between; align-items: center; }
-  .footer-logo { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.88rem; letter-spacing: 0.06em; color: var(--muted); }
-  .footer-logo span { color: var(--orange); }
-  .footer-copy { font-size: 0.7rem; color: var(--muted); }
+  footer { position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 1.8rem 5vw; display: flex; justify-content: space-between; align-items: center; }
+  .foot-logo { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.88rem; letter-spacing: 0.05em; color: var(--muted); }
+  .foot-logo span { color: var(--orange); }
+  .foot-copy { font-size: 0.68rem; color: var(--muted); }
 
   /* ANIMATIONS */
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+  @keyframes up { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
   .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.65s ease, transform 0.65s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal.on { opacity: 1; transform: translateY(0); }
 
   /* RESPONSIVE */
-  @media (max-width: 960px) {
+  @media (max-width: 1000px) {
     #hero { grid-template-columns: 1fr; }
-    .hero-photo-col { min-height: 60vw; max-height: 75vh; }
-    .hero-copy-col { padding: 3rem 5vw; }
-    .hero-copy-col::before { display: none; }
-    #about, #experience, #skills, #contact { grid-template-columns: 1fr; }
-    .label-col { border-right: none; border-bottom: 1px solid var(--border); padding: 3rem 5vw 2rem; }
-    .content-col, .roles-col, .skills-grid, .contact-left, .contact-right { padding: 3rem 5vw; }
+    .hero-photo { min-height: 62vw; max-height: 78vh; }
+    .hero-copy { padding: 3rem 5vw; }
+    .hero-copy::before { display: none; }
+    .two-col { grid-template-columns: 1fr; }
+    .left-col { border-right: none; border-bottom: 1px solid var(--border); padding: 3.5rem 5vw 2.5rem; }
+    .right-col { padding: 3.5rem 5vw; }
+    #metrics { grid-template-columns: 1fr 1fr; }
+    .metric:nth-child(2){border-right:none;}
+    .metric:nth-child(3),.metric:nth-child(4){border-top:1px solid var(--border);}
+    .metric:nth-child(4){border-right:none;}
+    #contact { grid-template-columns: 1fr; }
     .contact-left { border-right: none; border-bottom: 1px solid var(--border); }
-    #impact { grid-template-columns: 1fr 1fr; }
-    .impact-item:nth-child(2) { border-right: none; }
-    .impact-item:nth-child(3), .impact-item:nth-child(4) { border-top: 1px solid var(--border); }
-    .impact-item:nth-child(4) { border-right: none; }
+    .contact-right { padding: 3.5rem 5vw; }
+    #strip { flex-wrap: wrap; }
+    .strip-item { flex: 1 1 50%; border-bottom: 1px solid var(--border); }
   }
-  @media (max-width: 600px) {
+  @media (max-width: 640px) {
     nav .nav-links { display: none; }
-    #impact { grid-template-columns: 1fr; }
-    .impact-item { border-right: none !important; border-top: 1px solid var(--border) !important; }
-    .impact-item:first-child { border-top: none !important; }
-    .skills-grid { grid-template-columns: 1fr; }
-    footer { flex-direction: column; gap: 0.8rem; text-align: center; }
-    .hero-stats { flex-wrap: wrap; }
+    .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+    #metrics { grid-template-columns: 1fr; }
+    .metric { border-right: none !important; border-top: 1px solid var(--border); }
+    .metric:first-child { border-top: none; }
+    .caps-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 0.7rem; text-align: center; }
+    .strip-item { flex: 1 1 100%; }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a class="nav-logo" href="#hero">taylor<span>bright</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
+    <li><a href="#capabilities">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a class="nav-hire" href="#contact">Hire Me</a>
+  <a class="nav-cta" href="#contact">Hire Me</a>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
-  <div class="hero-photo-col">
-    <div class="accent-bar"></div>
+  <div class="hero-photo">
+    <div class="photo-bar"></div>
     <img src="photo.jpg" alt="Taylor Bright">
   </div>
-  <div class="hero-copy-col">
-    <div class="credentials">
-      <div class="cred-item"><span class="cred-dot"></span><span class="cred-text">Founder, Perfect Entry — 2020 to present</span></div>
-      <div class="cred-item"><span class="cred-dot" style="background:var(--teal)"></span><span class="cred-text">BSc Economics, University of Essex — 2026</span></div>
-      <div class="cred-item"><span class="cred-dot"></span><span class="cred-text">Commercial Growth Leader — Fintech, Medtech &amp; Engineering</span></div>
-      <div class="cred-item"><span class="cred-dot" style="background:var(--teal)"></span><span class="cred-text">Open to Relocation</span></div>
+  <div class="hero-copy">
+    <div class="creds">
+      <div class="cred"><span class="pip"></span>Founder, Perfect Entry — 2020 to present</div>
+      <div class="cred"><span class="pip t"></span>BSc Economics, University of Essex — 2026</div>
+      <div class="cred"><span class="pip"></span>Fintech, Medtech and Engineering</div>
+      <div class="cred"><span class="pip t"></span>Based in the UK, open to relocation</div>
     </div>
-    <div class="hero-headline">
-      <div class="hero-pre">Commercial &amp; Growth Leader</div>
-      <h1 class="hero-name">Taylor Bright</h1>
+    <div class="hero-block">
+      <div class="hero-pre">Commercial Growth and Operations</div>
+      <h1 class="hero-name">Taylor<br>Bright</h1>
       <div class="hero-role">Founder. Operator. Revenue Builder.</div>
-      <p class="hero-body">I build <strong>revenue systems that scale.</strong> From founding a digital financial platform at £100k monthly revenue to tripling a medical technology business in six months, I combine entrepreneurial instinct with analytical rigour to grow things that others struggle to move.</p>
+      <p class="hero-summary">I build commercial systems that grow revenue. From taking a business idea to <strong>£100k monthly revenue</strong> from scratch, to rebuilding stalled growth functions inside established companies, I understand how revenue is actually made and how to build the infrastructure that makes it repeatable.</p>
     </div>
     <div class="hero-stats">
-      <div class="stat"><span class="stat-n">£100k</span><span class="stat-l">Peak Monthly Revenue</span></div>
-      <div class="stat"><span class="stat-n">3×</span><span class="stat-l">Revenue Growth in 6mo</span></div>
-      <div class="stat"><span class="stat-n">5+</span><span class="stat-l">Years as Founder</span></div>
+      <div><span class="stat-n">£100k</span><span class="stat-l">Peak Monthly Revenue</span></div>
+      <div><span class="stat-n">3×</span><span class="stat-l">Revenue Growth in 6mo</span></div>
+      <div><span class="stat-n">5+</span><span class="stat-l">Years as Founder</span></div>
     </div>
-    <div class="hero-actions">
-      <a class="btn-solid" href="#contact">Get in Touch</a>
-      <a class="btn-ghost" href="#experience">See Experience</a>
+    <div class="hero-ctas">
+      <a class="btn-fill" href="#experience">View Experience</a>
+      <a class="btn-line" href="#contact">Get in Touch</a>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="label-col reveal">
-    <span class="section-eyebrow">About</span>
-    <div class="section-num">01</div>
+<div id="strip">
+  <div class="strip-item"><span class="strip-label">Founder</span><span class="strip-value">Perfect Entry, 2020 to present</span></div>
+  <div class="strip-item"><span class="strip-label">Education</span><span class="strip-value">BSc Economics, University of Essex</span></div>
+  <div class="strip-item"><span class="strip-label">Industries</span><span class="strip-value">Fintech, Medtech, Engineering</span></div>
+  <div class="strip-item"><span class="strip-label">Location</span><span class="strip-value">UK, open to relocation</span></div>
+</div>
+
+<section id="about" class="two-col">
+  <div class="left-col reveal">
+    <span class="eyebrow">About</span>
+    <div class="col-num">01</div>
   </div>
-  <div class="content-col reveal">
+  <div class="right-col prose reveal">
     <h2>The operator behind <em>the numbers.</em></h2>
-    <p>I'm a commercial growth leader with a track record of building and scaling revenue systems across early-stage and growth businesses. I've done it as a <strong>founder</strong>, as a <strong>business development manager</strong>, and as the person quietly behind some of the most successful content in my niche.</p>
-    <p>My background spans fintech, medtech, engineering, and motorsport but the thread running through all of it is the same: I find where growth is being left on the table, build the infrastructure to capture it, and put the right teams in place to execute consistently.</p>
-    <p>Currently completing a <strong>BSc Economics at the University of Essex</strong> with a focus on behavioural finance, market structure, and quantitative analysis. Native English speaker, currently studying Arabic.</p>
-    <div class="pull-quote">
-      <p>"Focus on building structured revenue systems that allow teams to execute consistently. Analytical decision-making with entrepreneurial execution to drive sustainable growth."</p>
-      <span>Taylor Bright — Leadership Philosophy</span>
+    <p>At 22, I started building commercially before I had a job title for it. In 2020 I founded Perfect Entry, a digital trading education and analytics platform, from a simple idea with no funding and no team. Over the following years I built it into a business generating close to <strong>£100k a month at peak</strong>, handling every function myself: acquisition, pricing, content, retention, onboarding, and analytics. Getting there meant learning what most people only read about.</p>
+    <p>That experience gave me something most early-career candidates do not have: a real understanding of what it takes to grow a business. Not the theory, but the infrastructure underneath it. The systems, the tracking, the decisions about where to spend time and where not to. I think in inputs and outputs, and I build processes that hold up when things get messy.</p>
+    <p>Since then I have taken that mindset into other environments, working in medtech distribution, precision engineering, and commercial partnerships. The pattern is consistent: I find where growth is being left on the table, build the structure to capture it, and execute. I am finishing a <strong>BSc Economics at the University of Essex</strong> in 2026, focused on behavioural finance, market structure, and quantitative analysis.</p>
+    <div class="pull">
+      <p>"Build structured systems that allow teams to execute consistently. Combine analytical decision-making with entrepreneurial execution to drive growth that actually holds."</p>
+      <span>Leadership Philosophy</span>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="label-col reveal">
-    <span class="section-eyebrow">Experience</span>
-    <div class="section-num">02</div>
-    <h2 class="section-h">Where I've built <em>things.</em></h2>
-  </div>
-  <div class="roles-col">
-
-    <div class="role-block reveal">
-      <div class="role-header">
-        <div class="role-company">Perfect Entry</div>
-        <div class="role-period">2020 – Present</div>
-      </div>
-      <div class="role-title">Founder / Commercial Director</div>
-      <ul class="role-bullets">
-        <li>Founded and scaled a <strong>global trading analytics and education platform</strong> in financial markets.</li>
-        <li>Built and scaled to <strong>~£100k monthly revenue</strong> at peak performance through global online customer acquisition.</li>
-        <li>Led cross-functional teams across marketing, content production, and customer operations.</li>
-        <li>Designed pricing models, onboarding systems, and retention frameworks to maximise customer lifetime value.</li>
-        <li>Built analytics dashboards tracking conversion, engagement, and revenue performance.</li>
-      </ul>
-    </div>
-
-    <div class="role-block reveal">
-      <div class="role-header">
-        <div class="role-company">Global Prostate Solutions Ltd.</div>
-        <div class="role-period">Apr 2025 – Nov 2025</div>
-      </div>
-      <div class="role-title">Business Development Manager</div>
-      <ul class="role-bullets">
-        <li>Led a rapid commercial turnaround, rebuilding marketing and sales infrastructure for a medical technology distribution business.</li>
-        <li>Scaled the marketing team from <strong>3 to 9 employees</strong>, leading recruitment and pipeline generation.</li>
-        <li>Delivered <strong>3× revenue growth in six months</strong>, taking monthly revenue from ~£18k to ~£56k.</li>
-        <li>Secured the company's first commercial sales in India, <strong>opening a new international market.</strong></li>
-        <li>Introduced KPI-driven commercial reporting across marketing, sales, and distributor performance.</li>
-      </ul>
-    </div>
-
-    <div class="role-block reveal">
-      <div class="role-header">
-        <div class="role-company">Mather Engineering Ltd.</div>
-        <div class="role-period">Oct 2024 – Apr 2025</div>
-      </div>
-      <div class="role-title">Commercial Development / Business Partnerships</div>
-      <ul class="role-bullets">
-        <li>Secured new commercial partnerships, increasing machining job intake and capacity utilisation.</li>
-        <li>Led repositioning into the <strong>automotive machining market.</strong></li>
-        <li>Developed structured acquisition processes to improve pipeline stability.</li>
-      </ul>
-    </div>
-
-    <div class="role-block reveal">
-      <div class="role-header">
-        <div class="role-company">Black Art Designs &amp; Austin Motor Co.</div>
-        <div class="role-period">2016 – 2020</div>
-      </div>
-      <div class="role-title">Engineering &amp; Operations</div>
-      <ul class="role-bullets">
-        <li><strong>94% podium success rate</strong> on supported competition vehicles across multiple racing disciplines.</li>
-        <li>Nationally significant prototype programmes including London Taxi (LEVC) suspension and US Postal Service vehicle platform.</li>
-      </ul>
-    </div>
-
-  </div>
+<section id="metrics">
+  <div class="metric reveal"><div class="metric-n">£100k</div><div class="metric-l">Peak Monthly Revenue</div><div class="metric-d">Built Perfect Entry from a single idea to six-figure monthly revenue with no external funding.</div></div>
+  <div class="metric reveal"><div class="metric-n">3×</div><div class="metric-l">Revenue Growth</div><div class="metric-d">Tripled monthly revenue at Global Prostate Solutions in under six months by rebuilding the commercial function.</div></div>
+  <div class="metric reveal"><div class="metric-n">9</div><div class="metric-l">Team Built from 3</div><div class="metric-d">Recruited and structured a marketing and sales team from scratch with KPI systems to match.</div></div>
+  <div class="metric reveal"><div class="metric-n">94%</div><div class="metric-l">Podium Success Rate</div><div class="metric-d">Operational and engineering delivery across supported competition vehicles in high-performance motorsport.</div></div>
 </section>
 
-<!-- IMPACT -->
-<section id="impact">
-  <div class="impact-item reveal">
-    <div class="impact-n">£100k</div>
-    <div class="impact-label">Peak Monthly Revenue</div>
-    <div class="impact-sub">Built and scaled Perfect Entry to peak revenue through organic and paid acquisition.</div>
+<section id="experience" class="two-col">
+  <div class="left-col reveal">
+    <span class="eyebrow">Experience</span>
+    <div class="col-num">02</div>
+    <h2 class="col-h">Where I have built <em>things.</em></h2>
   </div>
-  <div class="impact-item reveal">
-    <div class="impact-n">3×</div>
-    <div class="impact-label">Revenue Growth</div>
-    <div class="impact-sub">Tripled monthly revenue at Global Prostate Solutions in under six months.</div>
-  </div>
-  <div class="impact-item reveal">
-    <div class="impact-n">9</div>
-    <div class="impact-label">Team Built from 3</div>
-    <div class="impact-sub">Recruited, structured and led a marketing and sales team from scratch.</div>
-  </div>
-  <div class="impact-item reveal">
-    <div class="impact-n">94%</div>
-    <div class="impact-label">Podium Success Rate</div>
-    <div class="impact-sub">Engineering and operational delivery across high-performance motorsport environments.</div>
-  </div>
-</section>
+  <div class="right-col">
+    <div class="roles">
 
-<!-- SKILLS -->
-<section id="skills">
-  <div class="label-col reveal">
-    <span class="section-eyebrow">Capabilities</span>
-    <div class="section-num">03</div>
-    <h2 class="section-h">What I bring to the <em>table.</em></h2>
-  </div>
-  <div class="skills-grid">
-    <div class="skill-cell reveal">
-      <h3>Revenue Growth Strategy</h3>
-      <div class="skill-tags"><span class="skill-tag">Go-to-Market</span><span class="skill-tag">Pipeline Build</span><span class="skill-tag">KPI Frameworks</span><span class="skill-tag">Revenue Ops</span></div>
-    </div>
-    <div class="skill-cell reveal">
-      <h3>Market Expansion</h3>
-      <div class="skill-tags"><span class="skill-tag">International Growth</span><span class="skill-tag">Market Entry</span><span class="skill-tag">Partnership Dev</span></div>
-    </div>
-    <div class="skill-cell reveal">
-      <h3>Sales Leadership</h3>
-      <div class="skill-tags"><span class="skill-tag">Team Scaling</span><span class="skill-tag">Hiring</span><span class="skill-tag">Performance Mgmt</span><span class="skill-tag">Coaching</span></div>
-    </div>
-    <div class="skill-cell reveal">
-      <h3>Digital Platform Building</h3>
-      <div class="skill-tags"><span class="skill-tag">Product Strategy</span><span class="skill-tag">Monetisation</span><span class="skill-tag">Retention</span><span class="skill-tag">Analytics</span></div>
-    </div>
-    <div class="skill-cell reveal">
-      <h3>Commercial Strategy</h3>
-      <div class="skill-tags"><span class="skill-tag">Mid-Market</span><span class="skill-tag">Pricing Models</span><span class="skill-tag">Key Accounts</span></div>
-    </div>
-    <div class="skill-cell reveal">
-      <h3>Revenue Analytics</h3>
-      <div class="skill-tags"><span class="skill-tag">Sales Performance</span><span class="skill-tag">Conversion Tracking</span><span class="skill-tag">Reporting</span></div>
+      <div class="role reveal">
+        <div class="role-top"><div class="role-co">Perfect Entry</div><div class="role-date">2020 – Present</div></div>
+        <div class="role-title">Founder / Commercial Director</div>
+        <p class="role-body">Started from a simple idea at 22 with no funding and no team. Built a global trading education and analytics platform from zero and took it to <strong>approximately £100k monthly revenue at peak</strong>. Responsible for every commercial function across the business from day one.</p>
+        <ul class="role-bullets">
+          <li>Designed and executed customer acquisition across paid, organic, and community channels</li>
+          <li>Built pricing models, onboarding flows, and retention systems from scratch</li>
+          <li>Grew a YouTube channel to over <strong>16,000 subscribers</strong> and a Discord community to over <strong>15,000 members</strong></li>
+          <li>Built analytics dashboards and live data tools used daily by paying members</li>
+          <li>Developed a real-time session screener and market analytics dashboard — both publicly accessible</li>
+        </ul>
+        <div class="proj-links">
+          <a class="proj-link" href="https://perfectentry.store/reversalsniperdata" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Live Data Dashboard
+          </a>
+          <a class="proj-link" href="https://perfectentry.store/whats-tradable-now" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Session Screener
+          </a>
+          <a class="yt-link" href="https://www.youtube.com/@perfectentrytrading" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+            YouTube Channel
+          </a>
+        </div>
+      </div>
+
+      <div class="role reveal">
+        <div class="role-top"><div class="role-co">Global Prostate Solutions Ltd.</div><div class="role-date">Apr 2025 – Nov 2025</div></div>
+        <div class="role-title">Business Development Manager</div>
+        <p class="role-body">Joined a medical technology distribution business with stalled commercial growth. Rebuilt the acquisition strategy end to end and introduced the operational infrastructure needed to scale.</p>
+        <ul class="role-bullets">
+          <li>Contributed to <strong>3× revenue growth in six months</strong>, taking monthly revenue from approximately £18k to £56k</li>
+          <li>Scaled the marketing and sales team from <strong>3 to 9 people</strong>, including recruitment and onboarding</li>
+          <li>Eliminated underperforming paid channels and rebuilt inbound acquisition systems</li>
+          <li>Introduced KPI reporting across marketing, sales, and distributor performance</li>
+          <li>Supported the company's first commercial sales in India, opening an international market for the first time</li>
+        </ul>
+      </div>
+
+      <div class="role reveal">
+        <div class="role-top"><div class="role-co">Mather Engineering Ltd.</div><div class="role-date">Oct 2024 – Apr 2025</div></div>
+        <div class="role-title">Commercial Development / Business Partnerships</div>
+        <ul class="role-bullets">
+          <li>Supported repositioning of the business into the <strong>automotive machining sector</strong></li>
+          <li>Secured new commercial partnerships to increase job intake and capacity utilisation</li>
+          <li>Built structured acquisition processes to reduce reliance on ad hoc referrals and stabilise pipeline</li>
+        </ul>
+      </div>
+
+      <div class="role reveal">
+        <div class="role-top"><div class="role-co">Black Art Designs / Austin Motor Company</div><div class="role-date">2016 – 2020</div></div>
+        <div class="role-title">Engineering and Operations</div>
+        <p class="role-body">Progressed from apprentice through to the managing director's right hand, taking on increasing operational and strategic responsibility across both organisations.</p>
+        <ul class="role-bullets">
+          <li><strong>94% podium success rate</strong> across supported competition vehicles in multiple racing disciplines</li>
+          <li>Contributed to nationally significant prototype programmes including London Taxi (LEVC) suspension development and the US Postal Service vehicle platform</li>
+          <li>Developed operational delivery capability in high-performance, high-stakes environments</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<section id="capabilities" class="two-col">
+  <div class="left-col reveal">
+    <span class="eyebrow">Capabilities</span>
+    <div class="col-num">03</div>
+    <h2 class="col-h">What I bring to the <em>table.</em></h2>
+  </div>
+  <div class="right-col" style="padding-top:6rem;padding-bottom:6rem;">
+    <div class="caps-grid">
+      <div class="cap reveal"><h3>Commercial Growth</h3><p>Building and scaling revenue from the ground up. Acquisition strategy, funnel design, pricing, and the infrastructure that makes growth repeatable rather than accidental.</p><span class="cap-tag">Go-to-Market / Revenue Ops</span></div>
+      <div class="cap reveal"><h3>Systems and Process</h3><p>Designing the operational layer underneath growth. Onboarding flows, KPI frameworks, reporting structures, and retention systems built to hold up at scale.</p><span class="cap-tag">Process Design / Ops</span></div>
+      <div class="cap reveal"><h3>Market Development</h3><p>Opening new channels, geographies, and customer segments. Experience taking businesses into markets where they had no prior presence, including international expansion.</p><span class="cap-tag">BD / Market Entry</span></div>
+      <div class="cap reveal"><h3>Data and Performance</h3><p>Tracking what matters and cutting what does not. Analytics dashboards, conversion tracking, distributor reporting, and sales pipeline visibility built from scratch.</p><span class="cap-tag">Analytics / Reporting</span></div>
+      <div class="cap reveal"><h3>Sales and Business Development</h3><p>Direct commercial execution. Partner relationships, pipeline generation, deal progression, and leading sales and marketing functions through growth phases.</p><span class="cap-tag">Sales / Partnerships</span></div>
+      <div class="cap reveal"><h3>Execution</h3><p>The part most strategies skip. Getting things done in early-stage environments where resources are limited, timelines are short, and ambiguity is constant.</p><span class="cap-tag">Startups / Scale-ups</span></div>
+    </div>
+  </div>
+</section>
+
 <section id="contact">
   <div class="contact-left reveal">
-    <span class="section-eyebrow">Contact</span>
-    <h2>Let's build something <em>great.</em></h2>
-    <p>Open to the right commercial leadership, business development, or founder-level role. If you're building something that needs someone who can build the growth engine around it, let's talk.</p>
-    <div class="contact-links">
-      <a class="contact-link" href="mailto:Taylorbright0001@gmail.com">
-        <svg class="cl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/>
-        </svg>
-        <div><span class="cl-label">Email</span><span class="cl-value">Taylorbright0001@gmail.com</span></div>
+    <span class="eyebrow">Contact</span>
+    <h2>If you are building something, <em>let's talk.</em></h2>
+    <p>I am open to commercial, growth, and operator roles across SaaS, startups, and scale-ups. I work best in environments where there is real ground to cover and the expectation is that you figure it out and deliver. If that sounds like where you are, get in touch.</p>
+    <div class="c-links">
+      <a class="c-link" href="mailto:Taylorbright0001@gmail.com">
+        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+        <div><span class="c-label">Email</span><span class="c-value">Taylorbright0001@gmail.com</span></div>
       </a>
-      <a class="contact-link" href="https://whop.com/perfect-entry" target="_blank">
-        <svg class="cl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/>
-        </svg>
-        <div><span class="cl-label">Project</span><span class="cl-value">Perfect Entry — whop.com/perfect-entry</span></div>
+      <a class="c-link" href="https://whop.com/perfect-entry" target="_blank">
+        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg>
+        <div><span class="c-label">Project</span><span class="c-value">Perfect Entry — whop.com/perfect-entry</span></div>
+      </a>
+      <a class="c-link" href="https://www.youtube.com/@perfectentrytrading" target="_blank">
+        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+        <div><span class="c-label">YouTube</span><span class="c-value">@perfectentrytrading</span></div>
       </a>
     </div>
   </div>
   <div class="contact-right reveal">
-    <div class="avail-badge"><span class="avail-dot"></span>Available for new roles</div>
-    <div class="contact-big">Based in Clacton-On-Sea.<br><span>Willing to relocate.</span></div>
+    <div class="avail"><span class="avail-dot"></span>Open to new roles</div>
+    <div class="contact-big">Based in the UK.<br><span>Willing to relocate.</span></div>
     <p class="contact-note">Open to remote, hybrid, or on-site depending on the opportunity. If the role is right, I will make it work.</p>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div class="footer-logo">taylor<span>bright</span></div>
-  <div class="footer-copy">© 2026 Taylor Bright. All rights reserved.</div>
+  <div class="foot-logo">taylor<span>bright</span></div>
+  <div class="foot-copy">© 2026 Taylor Bright</div>
 </footer>
 
 <script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-    });
-  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
+  }, { threshold: 0.07, rootMargin: '0px 0px -28px 0px' });
 
-  document.querySelectorAll('#impact, .skills-grid, .roles-col').forEach(container => {
-    container.querySelectorAll('.reveal').forEach((el, i) => {
-      el.style.transitionDelay = `${i * 0.07}s`;
-    });
+  ['.roles', '#metrics', '.caps-grid'].forEach(sel => {
+    const el = document.querySelector(sel);
+    if (el) el.querySelectorAll('.reveal').forEach((c, i) => { c.style.transitionDelay = `${i * 0.08}s`; });
   });
 
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
 </body>
 </html>
