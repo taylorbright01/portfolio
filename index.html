@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Taylor Bright — Commercial Growth &amp; Operations</title>
+<meta name="description" content="Taylor Bright is a commercial growth leader and founder with a track record of building revenue systems across fintech, medtech and engineering. Available for BD, growth and operator roles.">
+<meta property="og:title" content="Taylor Bright — Commercial Growth &amp; Operations">
+<meta property="og:description" content="Founder of Perfect Entry. Built from a simple idea to £100k monthly revenue. Available for commercial, growth and operator roles.">
+<meta property="og:image" content="https://taylorbright01.github.io/portfolio/photo.jpg">
+<meta property="og:url" content="https://taylorbright01.github.io/portfolio">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Taylor Bright — Commercial Growth &amp; Operations">
+<meta name="twitter:description" content="Founder. Operator. Revenue Builder. Available for BD, growth and operator roles.">
+<meta name="twitter:image" content="https://taylorbright01.github.io/portfolio/photo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -30,9 +40,12 @@
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 1.3rem 5vw; background: rgba(10,11,13,0.9); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); }
   .nav-logo { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.98rem; letter-spacing: 0.05em; color: var(--text); text-decoration: none; }
   .nav-logo span { color: var(--orange); }
-  .nav-links { display: flex; align-items: center; gap: 2.8rem; list-style: none; }
+  .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
   .nav-links a { font-size: 0.75rem; font-weight: 400; letter-spacing: 0.13em; text-transform: uppercase; color: var(--soft); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: var(--text); }
+  .nav-right { display: flex; align-items: center; gap: 0.8rem; }
+  .nav-cv { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.73rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); border: 1px solid rgba(23,197,180,0.3); padding: 0.55rem 1.2rem; border-radius: 2px; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
+  .nav-cv:hover { border-color: var(--teal); background: var(--t-lo); }
   .nav-cta { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.73rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bg); background: var(--orange); padding: 0.58rem 1.5rem; border-radius: 2px; text-decoration: none; transition: opacity 0.2s; }
   .nav-cta:hover { opacity: 0.86; }
 
@@ -44,24 +57,38 @@
   .photo-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 2px; z-index: 2; background: linear-gradient(90deg, var(--orange), var(--teal)); }
   .hero-copy { display: flex; flex-direction: column; justify-content: center; padding: 5rem 5.5vw 5rem 3.5vw; position: relative; }
   .hero-copy::before { content: ''; position: absolute; left: 0; top: 12%; bottom: 12%; width: 1px; background: linear-gradient(180deg, transparent, var(--teal) 35%, var(--orange) 75%, transparent); opacity: 0.2; }
+
+  /* credentials */
   .creds { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2.4rem; opacity: 0; animation: up 0.65s 0.15s forwards; }
   .cred { display: flex; align-items: center; gap: 0.7rem; font-size: 0.72rem; font-weight: 400; letter-spacing: 0.09em; text-transform: uppercase; color: var(--soft); }
   .pip { width: 4px; height: 4px; border-radius: 50%; flex-shrink: 0; background: var(--orange); }
   .pip.t { background: var(--teal); }
+
+  /* name + summary */
   .hero-block { opacity: 0; animation: up 0.65s 0.3s forwards; }
   .hero-pre { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.7rem; }
   .hero-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 5vw, 4.8rem); font-weight: 600; line-height: 0.98; color: var(--text); margin-bottom: 0.4rem; }
   .hero-role { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.1rem, 2vw, 1.6rem); font-weight: 400; font-style: italic; color: var(--orange); margin-bottom: 1.8rem; }
   .hero-summary { font-size: 0.95rem; font-weight: 300; color: var(--soft); line-height: 1.82; max-width: 460px; margin-bottom: 2.4rem; }
   .hero-summary strong { color: var(--text); font-weight: 500; }
+
+  /* graduating badge */
+  .grad-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--t-lo); border: 1px solid rgba(23,197,180,0.2); padding: 0.35rem 0.85rem; border-radius: 2px; font-size: 0.66rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 1.6rem; width: fit-content; }
+
+  /* stats */
   .hero-stats { display: flex; gap: 2.2rem; margin-bottom: 2.4rem; padding-bottom: 2.4rem; border-bottom: 1px solid var(--border); opacity: 0; animation: up 0.65s 0.48s forwards; }
   .stat-n { font-family: 'Cormorant Garamond', serif; font-size: 2.1rem; font-weight: 600; color: var(--orange); line-height: 1; display: block; }
   .stat-l { font-size: 0.62rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; display: block; }
-  .hero-ctas { display: flex; gap: 0.9rem; opacity: 0; animation: up 0.65s 0.62s forwards; }
-  .btn-fill { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; background: var(--orange); color: var(--bg); padding: 0.88rem 2.1rem; border-radius: 2px; text-decoration: none; transition: opacity 0.2s, transform 0.2s; }
+
+  /* ctas */
+  .hero-ctas { display: flex; gap: 0.9rem; flex-wrap: wrap; opacity: 0; animation: up 0.65s 0.62s forwards; }
+  .btn-fill { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; background: var(--orange); color: var(--bg); padding: 0.88rem 2.1rem; border-radius: 2px; text-decoration: none; transition: opacity 0.2s, transform 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; }
   .btn-fill:hover { opacity: 0.86; transform: translateY(-1px); }
   .btn-line { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; background: transparent; color: var(--text); border: 1px solid var(--border2); padding: 0.88rem 2.1rem; border-radius: 2px; text-decoration: none; transition: border-color 0.2s, transform 0.2s; }
   .btn-line:hover { border-color: var(--soft); transform: translateY(-1px); }
+  .btn-cv { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; background: transparent; color: var(--teal); border: 1px solid rgba(23,197,180,0.3); padding: 0.88rem 2.1rem; border-radius: 2px; text-decoration: none; transition: border-color 0.2s, background 0.2s, transform 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; }
+  .btn-cv:hover { border-color: var(--teal); background: var(--t-lo); transform: translateY(-1px); }
+  .btn-cv svg, .btn-fill svg { width: 13px; height: 13px; }
 
   /* STRIP */
   #strip { position: relative; z-index: 1; display: flex; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surface); }
@@ -70,7 +97,7 @@
   .strip-label { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); }
   .strip-value { font-size: 0.82rem; color: var(--soft); }
 
-  /* TWO-COL LAYOUT */
+  /* TWO-COL */
   .two-col { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1.55fr; border-top: 1px solid var(--border); }
   .left-col { padding: 6rem 4vw; border-right: 1px solid var(--border); display: flex; flex-direction: column; gap: 2.2rem; }
   .right-col { padding: 6rem 5vw; }
@@ -147,6 +174,9 @@
   .contact-big { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.7rem, 2.6vw, 2.4rem); font-weight: 600; color: var(--text); line-height: 1.2; }
   .contact-big span { color: var(--orange); }
   .contact-note { font-size: 0.82rem; color: var(--muted); line-height: 1.72; }
+  .contact-cv-btn { display: inline-flex; align-items: center; gap: 0.6rem; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); border: 1px solid rgba(23,197,180,0.25); background: var(--t-lo); padding: 0.7rem 1.2rem; border-radius: 2px; text-decoration: none; transition: border-color 0.2s, background 0.2s; width: fit-content; }
+  .contact-cv-btn:hover { border-color: var(--teal); background: rgba(23,197,180,0.13); }
+  .contact-cv-btn svg { width: 13px; height: 13px; }
 
   /* FOOTER */
   footer { position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 1.8rem 5vw; display: flex; justify-content: space-between; align-items: center; }
@@ -181,6 +211,7 @@
   }
   @media (max-width: 640px) {
     nav .nav-links { display: none; }
+    .nav-cv { display: none; }
     .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
     #metrics { grid-template-columns: 1fr; }
     .metric { border-right: none !important; border-top: 1px solid var(--border); }
@@ -194,14 +225,17 @@
 <body>
 
 <nav>
-  <a class="nav-logo" href="#hero">Taylor<span>Bright</span></a>
+  <a class="nav-logo" href="#hero">taylor<span>bright</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#capabilities">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a class="nav-cta" href="#contact">Hire Me</a>
+  <div class="nav-right">
+    <a class="nav-cv" href="taylor-bright-cv.pdf" download>Download CV</a>
+    <a class="nav-cta" href="#contact">Hire Me</a>
+  </div>
 </nav>
 
 <section id="hero">
@@ -212,7 +246,7 @@
   <div class="hero-copy">
     <div class="creds">
       <div class="cred"><span class="pip"></span>Founder, Perfect Entry — 2020 to present</div>
-      <div class="cred"><span class="pip t"></span>BSc Economics, University of Essex — 2026</div>
+      <div class="cred"><span class="pip t"></span>BSc Economics, University of Essex — graduating 2026</div>
       <div class="cred"><span class="pip"></span>Fintech, Medtech and Engineering</div>
       <div class="cred"><span class="pip t"></span>Based in the UK, open to relocation</div>
     </div>
@@ -220,6 +254,7 @@
       <div class="hero-pre">Commercial Growth and Operations</div>
       <h1 class="hero-name">Taylor<br>Bright</h1>
       <div class="hero-role">Founder. Operator. Revenue Builder.</div>
+      <div class="grad-badge">Graduating 2026 — available now</div>
       <p class="hero-summary">I build commercial systems that grow revenue. From taking a business idea to <strong>£100k monthly revenue</strong> from scratch, to rebuilding stalled growth functions inside established companies, I understand how revenue is actually made and how to build the infrastructure that makes it repeatable.</p>
     </div>
     <div class="hero-stats">
@@ -229,6 +264,10 @@
     </div>
     <div class="hero-ctas">
       <a class="btn-fill" href="#experience">View Experience</a>
+      <a class="btn-cv" href="taylor-bright-cv.pdf" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download CV
+      </a>
       <a class="btn-line" href="#contact">Get in Touch</a>
     </div>
   </div>
@@ -236,7 +275,7 @@
 
 <div id="strip">
   <div class="strip-item"><span class="strip-label">Founder</span><span class="strip-value">Perfect Entry, 2020 to present</span></div>
-  <div class="strip-item"><span class="strip-label">Education</span><span class="strip-value">BSc Economics, University of Essex</span></div>
+  <div class="strip-item"><span class="strip-label">Education</span><span class="strip-value">BSc Economics, University of Essex — 2026</span></div>
   <div class="strip-item"><span class="strip-label">Industries</span><span class="strip-value">Fintech, Medtech, Engineering</span></div>
   <div class="strip-item"><span class="strip-label">Location</span><span class="strip-value">UK, open to relocation</span></div>
 </div>
@@ -252,17 +291,33 @@
     <p>That experience gave me something most early-career candidates do not have: a real understanding of what it takes to grow a business. Not the theory, but the infrastructure underneath it. The systems, the tracking, the decisions about where to spend time and where not to. I think in inputs and outputs, and I build processes that hold up when things get messy.</p>
     <p>Since then I have taken that mindset into other environments, working in medtech distribution, precision engineering, and commercial partnerships. The pattern is consistent: I find where growth is being left on the table, build the structure to capture it, and execute. I am finishing a <strong>BSc Economics at the University of Essex</strong> in 2026, focused on behavioural finance, market structure, and quantitative analysis.</p>
     <div class="pull">
-      <p>"I Build structured systems that allow teams to execute consistently. Combine analytical decision-making with entrepreneurial execution to drive growth that actually holds."</p>
+      <p>"Build structured systems that allow teams to execute consistently. Combine analytical decision-making with entrepreneurial execution to drive growth that actually holds."</p>
       <span>Leadership Philosophy</span>
     </div>
   </div>
 </section>
 
 <section id="metrics">
-  <div class="metric reveal"><div class="metric-n">£100k</div><div class="metric-l">Peak Monthly Revenue</div><div class="metric-d">Built Perfect Entry from a single idea to six-figure monthly revenue with no external funding.</div></div>
-  <div class="metric reveal"><div class="metric-n">3×</div><div class="metric-l">Revenue Growth</div><div class="metric-d">Tripled monthly revenue at Global Prostate Solutions in under six months by rebuilding the commercial function.</div></div>
-  <div class="metric reveal"><div class="metric-n">9</div><div class="metric-l">Team Built from 3</div><div class="metric-d">Recruited and structured a marketing and sales team from scratch with KPI systems to match.</div></div>
-  <div class="metric reveal"><div class="metric-n">94%</div><div class="metric-l">Podium Success Rate</div><div class="metric-d">Operational and engineering delivery across supported competition vehicles in high-performance motorsport.</div></div>
+  <div class="metric reveal">
+    <div class="metric-n">£100k</div>
+    <div class="metric-l">Peak Monthly Revenue</div>
+    <div class="metric-d">Built Perfect Entry from a single idea to six-figure monthly revenue with no external funding.</div>
+  </div>
+  <div class="metric reveal">
+    <div class="metric-n">3×</div>
+    <div class="metric-l">Revenue Growth</div>
+    <div class="metric-d">Tripled monthly revenue at Global Prostate Solutions in under six months by rebuilding the commercial function.</div>
+  </div>
+  <div class="metric reveal">
+    <div class="metric-n">9</div>
+    <div class="metric-l">Team Built from 3</div>
+    <div class="metric-d">Recruited and structured a marketing and sales team from scratch with KPI systems to match.</div>
+  </div>
+  <div class="metric reveal">
+    <div class="metric-n">2</div>
+    <div class="metric-l">New Revenue Streams</div>
+    <div class="metric-d">Identified and built new commercial lines at Global Prostate Solutions and Mather Engineering, creating income where none existed before.</div>
+  </div>
 </section>
 
 <section id="experience" class="two-col">
@@ -283,7 +338,7 @@
           <li>Built pricing models, onboarding flows, and retention systems from scratch</li>
           <li>Grew a YouTube channel to over <strong>16,000 subscribers</strong> and a Discord community to over <strong>15,000 members</strong></li>
           <li>Built analytics dashboards and live data tools used daily by paying members</li>
-          <li>Developed a real-time session screener and market analytics dashboard — both publicly accessible</li>
+          <li>Developed a real-time session screener and market analytics dashboard, both publicly accessible</li>
         </ul>
         <div class="proj-links">
           <a class="proj-link" href="https://perfectentry.store/reversalsniperdata" target="_blank">
@@ -304,9 +359,10 @@
       <div class="role reveal">
         <div class="role-top"><div class="role-co">Global Prostate Solutions Ltd.</div><div class="role-date">Apr 2025 – Nov 2025</div></div>
         <div class="role-title">Business Development Manager</div>
-        <p class="role-body">Joined a medical technology distribution business with stalled commercial growth. Rebuilt the acquisition strategy end to end and introduced the operational infrastructure needed to scale.</p>
+        <p class="role-body">Joined a medical technology distribution business with stalled commercial growth. Rebuilt the acquisition strategy end to end, introduced the operational infrastructure needed to scale, and identified an entirely new commercial line within the business.</p>
         <ul class="role-bullets">
           <li>Contributed to <strong>3× revenue growth in six months</strong>, taking monthly revenue from approximately £18k to £56k</li>
+          <li>Built a new revenue stream within the business, creating income from a commercial line that did not previously exist</li>
           <li>Scaled the marketing and sales team from <strong>3 to 9 people</strong>, including recruitment and onboarding</li>
           <li>Eliminated underperforming paid channels and rebuilt inbound acquisition systems</li>
           <li>Introduced KPI reporting across marketing, sales, and distributor performance</li>
@@ -317,8 +373,9 @@
       <div class="role reveal">
         <div class="role-top"><div class="role-co">Mather Engineering Ltd.</div><div class="role-date">Oct 2024 – Apr 2025</div></div>
         <div class="role-title">Commercial Development / Business Partnerships</div>
+        <p class="role-body">Brought in a new field of business for the company, opening the automotive machining sector as a commercial line that had not previously existed within the organisation.</p>
         <ul class="role-bullets">
-          <li>Supported repositioning of the business into the <strong>automotive machining sector</strong></li>
+          <li>Identified and developed the automotive machining sector as a <strong>new revenue stream</strong> for the business</li>
           <li>Secured new commercial partnerships to increase job intake and capacity utilisation</li>
           <li>Built structured acquisition processes to reduce reliance on ad hoc referrals and stabilise pipeline</li>
         </ul>
@@ -327,9 +384,9 @@
       <div class="role reveal">
         <div class="role-top"><div class="role-co">Black Art Designs / Austin Motor Company</div><div class="role-date">2016 – 2020</div></div>
         <div class="role-title">Engineering and Operations</div>
-        <p class="role-body">Progressed from apprentice through to the managing director's right hand, taking on increasing operational and strategic responsibility across both organisations.</p>
+        <p class="role-body">Progressed from apprentice through to the managing director's right hand, taking on increasing operational and strategic responsibility across both organisations over four years.</p>
         <ul class="role-bullets">
-          <li><strong>94% podium success rate</strong> across supported competition vehicles in multiple racing disciplines</li>
+          <li>94% podium success rate across supported competition vehicles in multiple racing disciplines</li>
           <li>Contributed to nationally significant prototype programmes including London Taxi (LEVC) suspension development and the US Postal Service vehicle platform</li>
           <li>Developed operational delivery capability in high-performance, high-stakes environments</li>
         </ul>
@@ -381,11 +438,15 @@
     <div class="avail"><span class="avail-dot"></span>Open to new roles</div>
     <div class="contact-big">Based in the UK.<br><span>Willing to relocate.</span></div>
     <p class="contact-note">Open to remote, hybrid, or on-site depending on the opportunity. If the role is right, I will make it work.</p>
+    <a class="contact-cv-btn" href="taylor-bright-cv.pdf" download>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download CV
+    </a>
   </div>
 </section>
 
 <footer>
-  <div class="foot-logo">Taylor<span>Bright</span></div>
+  <div class="foot-logo">taylor<span>bright</span></div>
   <div class="foot-copy">© 2026 Taylor Bright</div>
 </footer>
 
@@ -393,12 +454,10 @@
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
   }, { threshold: 0.07, rootMargin: '0px 0px -28px 0px' });
-
   ['.roles', '#metrics', '.caps-grid'].forEach(sel => {
     const el = document.querySelector(sel);
     if (el) el.querySelectorAll('.reveal').forEach((c, i) => { c.style.transitionDelay = `${i * 0.08}s`; });
   });
-
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
 </body>
