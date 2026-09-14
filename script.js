@@ -189,12 +189,17 @@
   };
 
   let workshopOpen = false;
+  let bookTurnTimer = 0;
+  let pointerFrame = 0;
+  const BOOK_OPEN_MS = 2250;
+  const BOOK_CLOSE_MS = 1950;
   let evidenceReturnFocus = null;
 
   function setWorkshop(open, options = {}) {
     const focusRoom = options.focusRoom || false;
+    const restoreFocus = options.restoreFocus || false;
+    const stateChanged = workshopOpen !== open;
     workshopOpen = open;
-    theatre.classList.toggle("is-open", open);
     theatre.dataset.state = open ? "open" : "closed";
     portraitTrigger.setAttribute("aria-expanded", String(open));
     headBook.setAttribute("aria-hidden", String(!open));
@@ -203,16 +208,43 @@
       button.tabIndex = open ? 0 : -1;
     });
 
-    if (open && focusRoom) {
-      window.setTimeout(() => roomButtons[0]?.focus({ preventScroll: true }), reducedMotion.matches ? 0 : 950);
-    }
-
     if (!open) {
       roomButtons.forEach((button) => {
         button.classList.remove("active");
         button.setAttribute("aria-expanded", "false");
       });
     }
+
+    if (!stateChanged) {
+      if (open && focusRoom) roomButtons[0]?.focus({ preventScroll: true });
+      return;
+    }
+
+    window.clearTimeout(bookTurnTimer);
+    if (pointerFrame) window.cancelAnimationFrame(pointerFrame);
+    pointerFrame = 0;
+    theatre.style.setProperty("--mx", "0deg");
+    theatre.style.setProperty("--my", "0deg");
+    theatre.classList.remove("is-opening", "is-closing");
+
+    const finishTurn = () => {
+      if (workshopOpen !== open) return;
+      theatre.classList.remove("is-turning", "is-opening", "is-closing");
+      if (open && focusRoom) roomButtons[0]?.focus({ preventScroll: true });
+      if (!open && restoreFocus) portraitTrigger.focus({ preventScroll: true });
+    };
+
+    if (reducedMotion.matches) {
+      theatre.classList.toggle("is-open", open);
+      finishTurn();
+      return;
+    }
+
+    theatre.classList.add("is-turning", open ? "is-opening" : "is-closing");
+    window.requestAnimationFrame(() => {
+      theatre.classList.toggle("is-open", open);
+    });
+    bookTurnTimer = window.setTimeout(finishTurn, open ? BOOK_OPEN_MS : BOOK_CLOSE_MS);
   }
 
   function openTheWorkshop(event) {
@@ -221,18 +253,16 @@
 
   portraitTrigger.addEventListener("click", openTheWorkshop);
   openWorkshop.addEventListener("click", () => {
-    openTheWorkshop();
-    if (window.innerWidth < 901) {
-      window.setTimeout(() => theatre.scrollIntoView({
-        behavior: reducedMotion.matches ? "auto" : "smooth",
-        block: "center"
-      }), 120);
+    if (window.innerWidth < 901 && !reducedMotion.matches) {
+      theatre.scrollIntoView({ behavior: "smooth", block: "center" });
+      window.setTimeout(openTheWorkshop, 520);
+      return;
     }
+    openTheWorkshop();
   });
 
   closeBook.addEventListener("click", () => {
-    setWorkshop(false);
-    portraitTrigger.focus({ preventScroll: true });
+    setWorkshop(false, { restoreFocus: true });
   });
 
   function renderRoom(key, options = {}) {
@@ -429,14 +459,21 @@
 
   if (finePointer.matches && !reducedMotion.matches) {
     theatre.addEventListener("pointermove", (event) => {
+      if (theatre.classList.contains("is-turning")) return;
       const box = theatre.getBoundingClientRect();
       const x = (event.clientX - box.left) / box.width - 0.5;
       const y = (event.clientY - box.top) / box.height - 0.5;
-      theatre.style.setProperty("--mx", (x * 4.5) + "deg");
-      theatre.style.setProperty("--my", (y * -3.5) + "deg");
+      if (pointerFrame) window.cancelAnimationFrame(pointerFrame);
+      pointerFrame = window.requestAnimationFrame(() => {
+        theatre.style.setProperty("--mx", (x * 4.5) + "deg");
+        theatre.style.setProperty("--my", (y * -3.5) + "deg");
+        pointerFrame = 0;
+      });
     });
 
     theatre.addEventListener("pointerleave", () => {
+      if (pointerFrame) window.cancelAnimationFrame(pointerFrame);
+      pointerFrame = 0;
       theatre.style.setProperty("--mx", "0deg");
       theatre.style.setProperty("--my", "0deg");
     });
