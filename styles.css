@@ -373,7 +373,7 @@ a {
   --my: 0deg;
   position: relative;
   z-index: 2;
-  width: min(100%, 840px);
+  width: min(100%, 900px);
   min-height: min(680px, 78svh);
   margin-inline: auto;
   perspective: 1600px;
@@ -397,8 +397,8 @@ a {
   z-index: 8;
   top: 50%;
   left: 50%;
-  width: min(430px, 60vw);
-  aspect-ratio: 0.83;
+  width: min(460px, 60vw, 64svh);
+  aspect-ratio: 1;
   padding: 0;
   border: 0;
   color: var(--paper);
@@ -428,9 +428,22 @@ a {
   position: absolute;
   inset: 0;
   overflow: hidden;
-  clip-path: var(--head-right);
-  filter: drop-shadow(0 28px 36px rgba(0,0,0,0.55));
+  border: 1px solid rgba(242,213,141,0.28);
+  border-radius: 18px;
+  background: #ece7dd;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.5);
   transform-style: preserve-3d;
+  transition: transform 500ms ease, opacity 360ms ease, filter 360ms ease;
+}
+
+.portrait-full {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  filter: saturate(0.94) contrast(1.02);
+  transition: transform 700ms cubic-bezier(.2,.85,.2,1), filter 500ms ease;
 }
 
 .portrait-half {
@@ -483,14 +496,14 @@ a {
   bottom: 5%;
   left: 50%;
   width: 1px;
-  opacity: 0.3;
+  opacity: 0;
   background: linear-gradient(transparent, var(--brass-light) 16%, var(--brass-light) 83%, transparent);
   box-shadow: 0 0 12px rgba(216,173,87,0.5);
   transition: opacity 220ms ease;
 }
 
 .portrait-trigger:hover .portrait-seam {
-  opacity: 1;
+  opacity: 0.28;
 }
 
 .portrait-caption {
@@ -536,8 +549,8 @@ a {
   left: 50%;
   display: grid;
   grid-template-columns: 1fr 18px 1fr;
-  width: min(790px, 100%);
-  aspect-ratio: 1.36;
+  width: min(900px, 100%);
+  aspect-ratio: 1.72;
   opacity: 0;
   visibility: hidden;
   transform:
@@ -554,19 +567,20 @@ a {
 }
 
 .hero-theatre.is-open .portrait-trigger {
+  opacity: 0;
+  visibility: hidden;
   pointer-events: none;
+  transform:
+    translate(-50%, -50%)
+    scale(0.94)
+    rotateX(var(--my))
+    rotateY(var(--mx));
+  transition-delay: 280ms;
 }
 
-.hero-theatre.is-open .portrait-half.left {
-  opacity: 0;
-  filter: brightness(0.4);
-  transform: translateX(-68%) rotateY(-86deg);
-}
-
-.hero-theatre.is-open .portrait-half.right {
-  opacity: 0;
-  filter: brightness(0.4);
-  transform: translateX(68%) rotateY(86deg);
+.hero-theatre.is-open .portrait-full {
+  filter: saturate(0.65) brightness(0.65);
+  transform: scale(0.98);
 }
 
 .hero-theatre.is-open .portrait-seam,
@@ -723,10 +737,19 @@ a {
 .scene {
   position: absolute;
   z-index: 1;
-  inset: 4px 5% 20px;
-  width: 90%;
-  height: calc(100% - 24px);
+  top: 4px;
+  bottom: 18px;
+  width: 76%;
+  height: calc(100% - 22px);
   overflow: visible;
+}
+
+.head-wing.left .scene {
+  left: 22%;
+}
+
+.head-wing.right .scene {
+  left: 2%;
 }
 
 .room-label {
@@ -747,6 +770,14 @@ a {
   letter-spacing: 0.11em;
   font-family: "Space Mono", monospace;
   font-size: clamp(0.5rem, 0.75vw, 0.63rem);
+}
+
+.head-wing.left .room-label {
+  left: 24%;
+}
+
+.head-wing.right .room-label {
+  right: 24%;
 }
 
 .room-label span {
@@ -898,7 +929,7 @@ a {
   position: absolute;
   z-index: 3;
   top: 15%;
-  right: 8%;
+  right: 22%;
   display: flex;
   gap: 3px;
   padding: 5px;
@@ -937,8 +968,8 @@ a {
   position: absolute;
   z-index: 3;
   top: calc(15% + 46px);
-  right: 8%;
-  width: 178px;
+  right: 22%;
+  width: 168px;
   color: var(--cyan);
   text-align: right;
   text-transform: uppercase;
@@ -1719,13 +1750,13 @@ a {
   }
 
   .portrait-trigger {
-    width: min(390px, 86vw);
+    width: min(480px, 92vw, 62svh);
   }
 
   .head-book {
     grid-template-columns: 1fr 12px 1fr;
     width: calc(100vw - 1.3rem);
-    aspect-ratio: 0.95;
+    aspect-ratio: 1.55;
   }
 
   .hinge {
@@ -1753,14 +1784,23 @@ a {
   }
 
   .scene {
-    inset: 2px 1% 15px;
-    width: 98%;
-    height: calc(100% - 17px);
+    top: 2px;
+    bottom: 14px;
+    width: 72%;
+    height: calc(100% - 16px);
+  }
+
+  .head-wing.left .scene {
+    left: 25%;
+  }
+
+  .head-wing.right .scene {
+    left: 3%;
   }
 
   .nixie-bank {
     top: 12%;
-    right: 4%;
+    right: 23%;
     gap: 1px;
     padding: 3px;
   }
@@ -1773,8 +1813,8 @@ a {
 
   .nixie-label {
     top: calc(12% + 33px);
-    right: 4%;
-    width: 100px;
+    right: 23%;
+    width: 92px;
     font-size: 0.32rem;
   }
 
