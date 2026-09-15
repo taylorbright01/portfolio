@@ -73,7 +73,7 @@
     communication: {
       number: "04",
       label: "Communication",
-      title: "Making the complicated thing feel graspable.",
+      title: "Making the complicated feel graspable.",
       summary: "Communication is not a layer added after the work. It is how strategy becomes coordinated actions and how technical information becomes useful enough for customers, colleagues and partners to trust.",
       metrics: [
         ["16,300+", "YouTube subscribers built organically"],
