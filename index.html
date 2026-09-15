@@ -1,477 +1,218 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Inside Taylor Bright — Founder, Engineer &amp; Commercial Builder</title>
-  <meta name="description" content="Step inside Taylor Bright's animated portfolio: engineering, leadership, experimentation, communication, data and a lifelong curiosity for art and history.">
-  <meta name="theme-color" content="#070b12">
-  <meta property="og:title" content="Inside Taylor Bright">
-  <meta property="og:description" content="I build the strange thing — and make the numbers work.">
-  <meta property="og:image" content="https://taylorbright01.github.io/portfolio/photo.jpg">
-  <meta property="og:url" content="https://taylorbright01.github.io/portfolio/">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#07100d">
+  <meta name="description" content="The interactive portfolio of Taylor Bright — founder, engineer, commercial operator and Economics graduate.">
+  <title>Taylor Bright — Draw a Card</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script>document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
   <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#field">Skip to the portfolio cards</a>
   <div class="grain" aria-hidden="true"></div>
-
-  <!--
-    This is not a stock "head" polygon. The curve below was traced from
-    Taylor's actual photograph, stopping at the base of the neck. Both open
-    leaves use the same profile; the left leaf mirrors it around the hinge.
-  -->
-  <svg class="profile-clip-defs" width="0" height="0" aria-hidden="true" focusable="false">
-    <defs>
-      <clipPath id="taylorProfileRight" clipPathUnits="objectBoundingBox">
-        <path d="M 0.6282 0.0000 L 0.6538 0.0128 L 0.6954 0.0257 L 0.7360 0.0385 L 0.7510 0.0514 L 0.7642 0.0642 L 0.7770 0.0771 L 0.7897 0.0899 L 0.8091 0.1028 L 0.8244 0.1156 L 0.8361 0.1284 L 0.8444 0.1413 L 0.8490 0.1541 L 0.8538 0.1670 L 0.8561 0.1798 L 0.8571 0.1927 L 0.8588 0.2055 L 0.8588 0.2183 L 0.8558 0.2312 L 0.8516 0.2440 L 0.8413 0.2569 L 0.8359 0.2697 L 0.8172 0.2826 L 0.8113 0.2954 L 0.8116 0.3083 L 0.8169 0.3211 L 0.8252 0.3339 L 0.8334 0.3468 L 0.8383 0.3596 L 0.8438 0.3725 L 0.8526 0.3853 L 0.8586 0.3982 L 0.8616 0.4110 L 0.8656 0.4239 L 0.8677 0.4367 L 0.8743 0.4495 L 0.8779 0.4624 L 0.8837 0.4752 L 0.8905 0.4881 L 0.8965 0.5009 L 0.9040 0.5138 L 0.9122 0.5266 L 0.9174 0.5394 L 0.9179 0.5523 L 0.9181 0.5651 L 0.9691 0.5780 L 0.9999 0.5908 L 0.9991 0.6037 L 0.9925 0.6165 L 0.9888 0.6294 L 0.9855 0.6422 L 0.9819 0.6550 L 0.9792 0.6679 L 0.9753 0.6807 L 0.9713 0.6936 L 0.9662 0.7064 L 0.9605 0.7193 L 0.9539 0.7321 L 0.9444 0.7450 L 0.9336 0.7578 L 0.9334 0.7706 L 0.9385 0.7835 L 0.9420 0.7963 L 0.9423 0.8092 L 0.9387 0.8220 L 0.9264 0.8349 L 0.8933 0.8477 L 0.8838 0.8606 L 0.8836 0.8734 L 0.8802 0.8862 L 0.8680 0.8991 L 0.8610 0.9119 L 0.8612 0.9248 L 0.8656 0.9376 L 0.8693 0.9505 L 0.8697 0.9633 L 0.8622 0.9761 L 0.8607 0.9890 L 0.8607 1.0000 L 0.0955 1.0000 L 0.1000 0.9872 L 0.1074 0.9743 L 0.1152 0.9615 L 0.1260 0.9486 L 0.1424 0.9358 L 0.1562 0.9229 L 0.1552 0.9101 L 0.1379 0.8972 L 0.1175 0.8844 L 0.1046 0.8716 L 0.0973 0.8587 L 0.0899 0.8459 L 0.0814 0.8330 L 0.0717 0.8202 L 0.0676 0.8073 L 0.0574 0.7945 L 0.0569 0.7817 L 0.0516 0.7688 L 0.0495 0.7560 L 0.0468 0.7431 L 0.0414 0.7303 L 0.0362 0.7174 L 0.0343 0.7046 L 0.0316 0.6917 L 0.0267 0.6789 L 0.0231 0.6661 L 0.0202 0.6532 L 0.0190 0.6404 L 0.0183 0.6275 L 0.0145 0.6147 L 0.0107 0.6018 L 0.0080 0.5890 L 0.0076 0.5761 L 0.0075 0.5633 L 0.0058 0.5505 L 0.0057 0.5376 L 0.0045 0.5248 L 0.0038 0.5119 L 0.0038 0.4991 L 0.0023 0.4862 L 0.0019 0.4734 L 0.0018 0.4606 L 0.0002 0.4477 L 0.0011 0.4349 L 0.0019 0.4220 L 0.0021 0.4092 L 0.0038 0.3963 L 0.0078 0.3835 L 0.0112 0.3706 L 0.0114 0.3578 L 0.0114 0.3450 L 0.0114 0.3321 L 0.0126 0.3193 L 0.0160 0.3064 L 0.0217 0.2936 L 0.0303 0.2807 L 0.0374 0.2679 L 0.0423 0.2550 L 0.0472 0.2422 L 0.0585 0.2294 L 0.0624 0.2165 L 0.0738 0.2037 L 0.0801 0.1908 L 0.0879 0.1780 L 0.0948 0.1651 L 0.1027 0.1523 L 0.1103 0.1394 L 0.1198 0.1266 L 0.1338 0.1138 L 0.1491 0.1009 L 0.1651 0.0881 L 0.1905 0.0752 L 0.2194 0.0624 L 0.2390 0.0495 L 0.2671 0.0367 L 0.3002 0.0239 L 0.4077 0.0110 Z"/>
-      </clipPath>
-      <clipPath id="taylorProfileLeft" clipPathUnits="objectBoundingBox">
-        <path transform="translate(1 0) scale(-1 1)" d="M 0.6282 0.0000 L 0.6538 0.0128 L 0.6954 0.0257 L 0.7360 0.0385 L 0.7510 0.0514 L 0.7642 0.0642 L 0.7770 0.0771 L 0.7897 0.0899 L 0.8091 0.1028 L 0.8244 0.1156 L 0.8361 0.1284 L 0.8444 0.1413 L 0.8490 0.1541 L 0.8538 0.1670 L 0.8561 0.1798 L 0.8571 0.1927 L 0.8588 0.2055 L 0.8588 0.2183 L 0.8558 0.2312 L 0.8516 0.2440 L 0.8413 0.2569 L 0.8359 0.2697 L 0.8172 0.2826 L 0.8113 0.2954 L 0.8116 0.3083 L 0.8169 0.3211 L 0.8252 0.3339 L 0.8334 0.3468 L 0.8383 0.3596 L 0.8438 0.3725 L 0.8526 0.3853 L 0.8586 0.3982 L 0.8616 0.4110 L 0.8656 0.4239 L 0.8677 0.4367 L 0.8743 0.4495 L 0.8779 0.4624 L 0.8837 0.4752 L 0.8905 0.4881 L 0.8965 0.5009 L 0.9040 0.5138 L 0.9122 0.5266 L 0.9174 0.5394 L 0.9179 0.5523 L 0.9181 0.5651 L 0.9691 0.5780 L 0.9999 0.5908 L 0.9991 0.6037 L 0.9925 0.6165 L 0.9888 0.6294 L 0.9855 0.6422 L 0.9819 0.6550 L 0.9792 0.6679 L 0.9753 0.6807 L 0.9713 0.6936 L 0.9662 0.7064 L 0.9605 0.7193 L 0.9539 0.7321 L 0.9444 0.7450 L 0.9336 0.7578 L 0.9334 0.7706 L 0.9385 0.7835 L 0.9420 0.7963 L 0.9423 0.8092 L 0.9387 0.8220 L 0.9264 0.8349 L 0.8933 0.8477 L 0.8838 0.8606 L 0.8836 0.8734 L 0.8802 0.8862 L 0.8680 0.8991 L 0.8610 0.9119 L 0.8612 0.9248 L 0.8656 0.9376 L 0.8693 0.9505 L 0.8697 0.9633 L 0.8622 0.9761 L 0.8607 0.9890 L 0.8607 1.0000 L 0.0955 1.0000 L 0.1000 0.9872 L 0.1074 0.9743 L 0.1152 0.9615 L 0.1260 0.9486 L 0.1424 0.9358 L 0.1562 0.9229 L 0.1552 0.9101 L 0.1379 0.8972 L 0.1175 0.8844 L 0.1046 0.8716 L 0.0973 0.8587 L 0.0899 0.8459 L 0.0814 0.8330 L 0.0717 0.8202 L 0.0676 0.8073 L 0.0574 0.7945 L 0.0569 0.7817 L 0.0516 0.7688 L 0.0495 0.7560 L 0.0468 0.7431 L 0.0414 0.7303 L 0.0362 0.7174 L 0.0343 0.7046 L 0.0316 0.6917 L 0.0267 0.6789 L 0.0231 0.6661 L 0.0202 0.6532 L 0.0190 0.6404 L 0.0183 0.6275 L 0.0145 0.6147 L 0.0107 0.6018 L 0.0080 0.5890 L 0.0076 0.5761 L 0.0075 0.5633 L 0.0058 0.5505 L 0.0057 0.5376 L 0.0045 0.5248 L 0.0038 0.5119 L 0.0038 0.4991 L 0.0023 0.4862 L 0.0019 0.4734 L 0.0018 0.4606 L 0.0002 0.4477 L 0.0011 0.4349 L 0.0019 0.4220 L 0.0021 0.4092 L 0.0038 0.3963 L 0.0078 0.3835 L 0.0112 0.3706 L 0.0114 0.3578 L 0.0114 0.3450 L 0.0114 0.3321 L 0.0126 0.3193 L 0.0160 0.3064 L 0.0217 0.2936 L 0.0303 0.2807 L 0.0374 0.2679 L 0.0423 0.2550 L 0.0472 0.2422 L 0.0585 0.2294 L 0.0624 0.2165 L 0.0738 0.2037 L 0.0801 0.1908 L 0.0879 0.1780 L 0.0948 0.1651 L 0.1027 0.1523 L 0.1103 0.1394 L 0.1198 0.1266 L 0.1338 0.1138 L 0.1491 0.1009 L 0.1651 0.0881 L 0.1905 0.0752 L 0.2194 0.0624 L 0.2390 0.0495 L 0.2671 0.0367 L 0.3002 0.0239 L 0.4077 0.0110 Z"/>
-      </clipPath>
-    </defs>
-  </svg>
 
   <header class="site-header" id="siteHeader">
     <a class="wordmark" href="#top" aria-label="Taylor Bright, home">TAYLOR<span>BRIGHT</span></a>
-    <div class="header-status" aria-hidden="true">
-      <span class="status-light"></span>
-      Six departments currently operational
-    </div>
-    <div class="header-actions">
+    <div class="header-status" aria-hidden="true"><span></span> SIX CARDS IN PLAY</div>
+    <nav class="header-actions" aria-label="Portfolio actions">
       <button class="text-button" type="button" data-open-evidence>Evidence mode</button>
-      <a class="header-cv" href="taylor-bright-cv.pdf" download>Download CV</a>
-    </div>
+      <a class="header-cv" href="taylor-bright-cv.pdf" target="_blank" rel="noreferrer">View CV</a>
+    </nav>
   </header>
 
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="hero-copy">
-        <p class="eyebrow">Founder · Engineer · Economics graduate</p>
-        <h1>I build the <em>strange thing</em> — and make the numbers work.</h1>
-        <p class="hero-lede">
-          I am Taylor Bright: a hands-on engineer turned founder and commercial operator.
-          I have built a digital business to <strong>£100k monthly revenue</strong>, helped another
-          grow from <strong>£18k to £56k a month</strong>, and never quite lost the instinct to
-          take things apart to see how they work.
-        </p>
+  <main>
+    <section class="hero" id="top" aria-labelledby="heroTitle">
+      <div class="hero-copy" id="heroCopy">
+        <p class="eyebrow">Founder · Engineer · Economics Graduate</p>
+        <h1 id="heroTitle">There is more than <em>one way</em> to read a career.</h1>
+        <p class="hero-lede">Mine moves from racing workshops to a £100k-a-month digital business, commercial turnarounds, data systems and an enduring habit of taking interesting things apart.</p>
+        <p class="hero-instruction"><span aria-hidden="true">↗</span> Draw the first card to begin.</p>
+      </div>
 
-        <div class="hero-actions">
-          <button class="solid-button" id="openWorkshop" type="button">
-            Open the workshop <span class="arrow" aria-hidden="true">→</span>
+      <div class="deck-stage" aria-label="A deck of portfolio cards">
+        <div class="deck-aura" aria-hidden="true"></div>
+        <div class="deck-scene" id="deckScene">
+          <div class="deck-shadow" aria-hidden="true"></div>
+          <div class="deck-stack" id="deckStack" aria-hidden="true"></div>
+
+          <button class="identity-card" id="identityCard" type="button" aria-label="Draw Taylor Bright's card">
+            <span class="portfolio-card identity-theme">
+              <span class="card-stock">
+                <span class="card-heading"><strong>Taylor Bright</strong><i>TB</i></span>
+                <span class="card-art identity-art"><img src="assets/cards/taylor.webp" alt="Taylor Bright" width="800" height="1000"></span>
+                <span class="card-type">[ FOUNDER / ENGINEER / OPERATOR ]</span>
+                <span class="card-rule">Build the strange thing. Make the numbers work.</span>
+                <span class="card-stats"><b>ATK £100K</b><b>EXP 14,000</b></span>
+              </span>
+            </span>
           </button>
-          <button class="ghost-button" type="button" data-open-evidence>Skip to the evidence</button>
         </div>
-
-        <div class="proof-strip" aria-label="Selected achievements">
-          <div class="proof">
-            <strong>14,000</strong>
-            <span>Paying customers</span>
-          </div>
-          <div class="proof">
-            <strong>£100k</strong>
-            <span>Peak monthly revenue</span>
-          </div>
-          <div class="proof">
-            <strong>94%</strong>
-            <span>Competition podium rate</span>
-          </div>
-        </div>
+        <p class="draw-hint" id="drawHint">CLICK TO DRAW</p>
       </div>
 
-      <div class="hero-theatre" id="heroTheatre" data-state="closed">
-        <div class="theatre-floor" aria-hidden="true"></div>
+      <button class="scroll-cue" id="scrollCue" type="button" aria-label="Scroll to the scattered portfolio cards">
+        <span>THE DECK HAS BEEN DEALT</span>
+        Scroll to the table <b aria-hidden="true">↓</b>
+      </button>
+    </section>
 
-        <button class="portrait-trigger" id="portraitTrigger" type="button" aria-label="Open Taylor's head like a book and explore six animated rooms" aria-expanded="false">
-          <span class="portrait-assembly" aria-hidden="true">
-            <img class="portrait-full" src="photo.jpg" alt="">
-            <span class="portrait-seam"></span>
-          </span>
-          <span class="portrait-caption">Click to look inside</span>
-        </button>
+    <section class="field-section" id="field" aria-labelledby="fieldTitle">
+      <div class="section-heading">
+        <p class="eyebrow">The cards on the table</p>
+        <h2 id="fieldTitle">Six sides of the work.<br><em>Draw whichever catches you.</em></h2>
+        <p>Most of the deck is face-down. Six cards hold the evidence. Each one joins your hand and opens the full story beneath the table.</p>
+      </div>
 
-        <div class="head-book" id="headBook" aria-label="Six rooms inside Taylor Bright's working mind" aria-hidden="true">
-          <div class="head-wing left">
-            <button class="room engineering" type="button" data-room="engineering" tabindex="-1" aria-controls="roomDetails" aria-expanded="false">
-              <svg class="scene" viewBox="0 0 280 140" role="img" aria-label="A mechanic works beneath a classic car">
-                <defs>
-                  <linearGradient id="carPaint" x1="0" x2="1">
-                    <stop stop-color="#a84529"/>
-                    <stop offset=".55" stop-color="#ef8b45"/>
-                    <stop offset="1" stop-color="#6f241c"/>
-                  </linearGradient>
-                </defs>
-                <rect x="22" y="22" width="5" height="93" fill="#697585"/>
-                <rect x="151" y="22" width="5" height="93" fill="#697585"/>
-                <rect class="lift-light" x="21" y="18" width="7" height="8" rx="2" fill="#ffb35b"/>
-                <g class="car-body">
-                  <path d="M42 72 L57 51 Q66 39 85 38 L122 38 Q137 40 145 56 L167 64 L171 81 L39 81 Z" fill="url(#carPaint)" stroke="#fac887" stroke-width="2"/>
-                  <path d="M69 51 Q77 43 89 43 L113 43 Q125 44 133 55 Z" fill="#182a38" stroke="#d6e8ec" stroke-width="1.5"/>
-                  <circle cx="68" cy="82" r="14" fill="#090d12" stroke="#8b96a3" stroke-width="3"/>
-                  <circle cx="142" cy="82" r="14" fill="#090d12" stroke="#8b96a3" stroke-width="3"/>
-                  <circle cx="68" cy="82" r="4" fill="#d8ad57"/>
-                  <circle cx="142" cy="82" r="4" fill="#d8ad57"/>
-                  <circle cx="161" cy="67" r="4" fill="#ffd074"/>
-                </g>
-                <rect x="35" y="94" width="132" height="5" fill="#7d8994"/>
-                <rect x="46" y="98" width="5" height="17" fill="#525e68"/>
-                <rect x="151" y="98" width="5" height="17" fill="#525e68"/>
-                <g transform="translate(194 53)">
-                  <circle cx="18" cy="15" r="10" fill="#d49a72"/>
-                  <path d="M7 12 Q18 -2 29 11" fill="#28313d"/>
-                  <path d="M8 29 Q19 21 32 31 L35 70 L4 70 Z" fill="#305a64"/>
-                  <path d="M10 70 L8 99 M29 70 L34 99" stroke="#3d4857" stroke-width="8"/>
-                  <g class="wrench-arm">
-                    <path d="M11 35 L-7 58" stroke="#d49a72" stroke-width="7" stroke-linecap="round"/>
-                    <path d="M-10 54 L-26 39" stroke="#bac5ce" stroke-width="4" stroke-linecap="round"/>
-                    <path d="M-31 34 L-22 39 L-27 48" fill="none" stroke="#bac5ce" stroke-width="4" stroke-linecap="round"/>
-                  </g>
-                </g>
-                <path d="M0 116 H280" stroke="#d8ad57" stroke-opacity=".55"/>
-                <circle class="dust" cx="245" cy="27" r="1.5" fill="#f2d58d"/>
-                <circle class="dust" cx="180" cy="24" r="1" fill="#f2d58d" style="animation-delay:1.4s"/>
-              </svg>
-              <span class="room-label"><strong>Engineering</strong><span>01</span></span>
-            </button>
+      <div class="field-stage">
+        <div class="felt-mark felt-mark-one" aria-hidden="true">T B</div>
+        <div class="felt-mark felt-mark-two" aria-hidden="true">59 × 86</div>
+        <div class="pile" id="pile">
+          <div class="pile-backs" id="pileBacks" aria-hidden="true"></div>
 
-            <button class="room leadership" type="button" data-room="leadership" tabindex="-1" aria-controls="roomDetails" aria-expanded="false">
-              <svg class="scene" viewBox="0 0 280 140" role="img" aria-label="A leader works with a team around a rising chart">
-                <rect x="94" y="15" width="154" height="76" rx="3" fill="#091118" stroke="#5f9f9a"/>
-                <path d="M108 76 L134 65 L155 69 L179 46 L202 50 L232 29" class="chart-line" fill="none" stroke="#70dbd2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M224 29 H232 V37" fill="none" stroke="#70dbd2" stroke-width="4"/>
-                <g transform="translate(37 37)">
-                  <circle cx="25" cy="14" r="11" fill="#d69b73"/>
-                  <path d="M14 12 Q25 -2 36 11" fill="#222a35"/>
-                  <path d="M11 31 Q25 23 39 32 L42 80 H7 Z" fill="#553044"/>
-                  <g class="leader-pointer">
-                    <path d="M35 38 L76 24" stroke="#d69b73" stroke-width="7" stroke-linecap="round"/>
-                    <circle cx="78" cy="23" r="3" fill="#d8ad57"/>
-                  </g>
-                </g>
-                <g transform="translate(104 95)">
-                  <g transform="translate(0 0)">
-                    <circle class="team-head" cx="14" cy="9" r="7" fill="#a87359"/>
-                    <path d="M4 36 Q14 18 24 36" fill="#354c64"/>
-                  </g>
-                  <g transform="translate(43 -4)">
-                    <circle class="team-head" cx="14" cy="9" r="7" fill="#d8a27a"/>
-                    <path d="M4 36 Q14 18 24 36" fill="#2d615f"/>
-                  </g>
-                  <g transform="translate(86 1)">
-                    <circle class="team-head" cx="14" cy="9" r="7" fill="#8c5f49"/>
-                    <path d="M4 36 Q14 18 24 36" fill="#67512d"/>
-                  </g>
-                  <g transform="translate(129 -3)">
-                    <circle class="team-head" cx="14" cy="9" r="7" fill="#c88968"/>
-                    <path d="M4 36 Q14 18 24 36" fill="#473f67"/>
-                  </g>
-                </g>
-                <path d="M0 126 H280" stroke="#d8ad57" stroke-opacity=".5"/>
-              </svg>
-              <span class="room-label"><strong>Leadership</strong><span>02</span></span>
-            </button>
+          <button class="field-card" type="button" data-card="engineering" style="--x:6%;--y:7%;--r:-9deg;--z:41" aria-label="Draw the Engineering card">
+            <span class="portfolio-card engineering-theme"><span class="card-stock">
+              <span class="card-heading"><strong>Engineering</strong><i>01</i></span>
+              <span class="card-art"><img src="assets/cards/engineering.webp" alt="Taylor's Toyota Celica GT-Four in an engineering workshop" width="800" height="1000" loading="lazy"></span>
+              <span class="card-type">[ MACHINE / VEHICLE DYNAMICS ]</span>
+              <span class="card-rule">Reality gets the deciding vote.</span>
+              <span class="card-stats"><b>ATK 94%</b><b>EXP 4Y</b></span>
+            </span></span>
+          </button>
 
-            <button class="room experiment" type="button" data-room="experiment" tabindex="-1" aria-controls="roomDetails" aria-expanded="false">
-              <svg class="scene" viewBox="0 0 280 140" role="img" aria-label="An inventor pulls a lever and a screen produces unusual ideas">
-                <rect x="24" y="20" width="166" height="76" rx="5" fill="#080b10" stroke="#a84f50" stroke-width="2"/>
-                <rect x="32" y="28" width="150" height="60" rx="2" fill="#1a0809"/>
-                <circle class="idea-bulb" cx="41" cy="37" r="3.5" fill="#ff8126"/>
-                <text id="ideaText" class="idea-screen-text" x="107" y="62" text-anchor="middle">BUILD THEN MEASURE</text>
-                <path d="M39 76 H171" stroke="#63262a" stroke-dasharray="3 4"/>
-                <g transform="translate(210 28)">
-                  <rect x="4" y="53" width="49" height="43" rx="4" fill="#2a303a" stroke="#9ba4ad"/>
-                  <circle cx="29" cy="74" r="14" fill="#0c1119" stroke="#d8ad57" stroke-width="3"/>
-                  <g class="lever-stick">
-                    <path d="M29 71 L29 19" stroke="#bbc4cb" stroke-width="6" stroke-linecap="round"/>
-                    <circle cx="29" cy="12" r="10" fill="#df4b4b" stroke="#ff9e79" stroke-width="2"/>
-                  </g>
-                </g>
-                <g transform="translate(106 94)">
-                  <circle cx="14" cy="8" r="7" fill="#c78c68"/>
-                  <path d="M4 17 Q14 13 24 18 L26 38 H2 Z" fill="#41344d"/>
-                  <path d="M5 23 L-8 35" stroke="#c78c68" stroke-width="5" stroke-linecap="round"/>
-                </g>
-                <path d="M0 126 H280" stroke="#d8ad57" stroke-opacity=".5"/>
-                <path d="M200 19 l5 -9 M210 17 l1 -10 M220 20 l7 -7" stroke="#ff9d3d" stroke-width="2" class="idea-bulb"/>
-              </svg>
-              <span class="room-label"><strong>Experimentation</strong><span>03</span></span>
-            </button>
-          </div>
+          <button class="field-card" type="button" data-card="leadership" style="--x:39%;--y:2%;--r:7deg;--z:44" aria-label="Draw the Commercial Leadership card">
+            <span class="portfolio-card leadership-theme"><span class="card-stock">
+              <span class="card-heading"><strong>Commercial Leadership</strong><i>02</i></span>
+              <span class="card-art leadership-art" aria-label="Revenue increased from eighteen thousand to fifty-six thousand pounds and the team grew from three to nine">
+                <span class="leadership-overline">SIX-MONTH FIELD REPORT</span>
+                <span class="leadership-number"><small>£18K</small><b>→</b><strong>£56K</strong></span>
+                <span class="leadership-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                <span class="leadership-team"><b>TEAM</b> 3 <i>→</i> 9</span>
+              </span>
+              <span class="card-type">[ LEADERSHIP / REVENUE SYSTEMS ]</span>
+              <span class="card-rule">Make ambition operational.</span>
+              <span class="card-stats"><b>REV +211%</b><b>INDIA OPEN</b></span>
+            </span></span>
+          </button>
 
-          <div class="hinge" aria-hidden="true"></div>
+          <button class="field-card" type="button" data-card="experimentation" style="--x:70%;--y:10%;--r:-6deg;--z:43" aria-label="Draw the Experimentation card">
+            <span class="portfolio-card experiment-theme"><span class="card-stock">
+              <span class="card-heading"><strong>Experimentation</strong><i>03</i></span>
+              <span class="card-art"><img src="assets/cards/experimentation.webp" alt="Taylor's Yu-Gi-Oh cards in play on a Negate playmat" width="800" height="1000" loading="lazy"></span>
+              <span class="card-type">[ STRATEGY / TEST / REBUILD ]</span>
+              <span class="card-rule">The unusual idea still has to survive the test.</span>
+              <span class="card-stats"><b>LV REGIONAL</b><b>META ADAPT</b></span>
+            </span></span>
+          </button>
 
-          <div class="head-wing right">
-            <button class="room communication" type="button" data-room="communication" tabindex="-1" aria-controls="roomDetails" aria-expanded="false">
-              <svg class="scene" viewBox="0 0 280 140" role="img" aria-label="A presenter communicates an idea to a camera and audience">
-                <g transform="translate(20 47)">
-                  <rect x="0" y="5" width="40" height="29" rx="4" fill="#202b38" stroke="#7f8995"/>
-                  <circle cx="13" cy="19" r="8" fill="#081017" stroke="#70dbd2" stroke-width="2"/>
-                  <path class="camera-handle" d="M20 4 L33 -12 L51 -12" fill="none" stroke="#7f8995" stroke-width="4" stroke-linecap="round"/>
-                  <rect class="camera-light" x="27" y="-1" width="14" height="7" rx="2" fill="#f2d58d"/>
-                  <path d="M19 34 L7 66 M21 34 L37 66" stroke="#697684" stroke-width="4"/>
-                </g>
-                <g transform="translate(91 28)">
-                  <circle cx="26" cy="17" r="11" fill="#d79b72"/>
-                  <path d="M15 14 Q27 -1 39 13" fill="#242833"/>
-                  <path d="M13 36 Q27 26 42 37 L45 88 H9 Z" fill="#344d69"/>
-                  <g class="presenter-arm">
-                    <path d="M39 43 L73 29" stroke="#d79b72" stroke-width="7" stroke-linecap="round"/>
-                    <circle cx="76" cy="28" r="3" fill="#d79b72"/>
-                  </g>
-                  <path d="M14 48 L-5 61" stroke="#d79b72" stroke-width="7" stroke-linecap="round"/>
-                </g>
-                <rect x="170" y="23" width="82" height="62" fill="#0b1119" stroke="#d8ad57"/>
-                <circle cx="191" cy="45" r="9" fill="none" stroke="#ff8126" stroke-width="3"/>
-                <path d="M209 39 H240 M209 49 H232 M184 68 H241" stroke="#8995a2" stroke-width="3" stroke-linecap="round"/>
-                <circle cx="216" cy="107" r="8" fill="#594337"/>
-                <path d="M204 129 Q216 113 228 129" fill="#3b4c5e"/>
-                <circle cx="245" cy="106" r="7" fill="#a8755e"/>
-                <path d="M234 129 Q245 114 257 129" fill="#5a3c48"/>
-                <circle class="sound-wave" cx="149" cy="55" r="12" fill="none" stroke="#70dbd2"/>
-                <circle class="sound-wave delay" cx="149" cy="55" r="19" fill="none" stroke="#70dbd2"/>
-                <path d="M0 130 H280" stroke="#d8ad57" stroke-opacity=".5"/>
-              </svg>
-              <span class="room-label"><strong>Communication</strong><span>04</span></span>
-            </button>
+          <button class="field-card" type="button" data-card="communication" style="--x:11%;--y:49%;--r:12deg;--z:46" aria-label="Draw the Communication card">
+            <span class="portfolio-card communication-theme"><span class="card-stock">
+              <span class="card-heading"><strong>Communication</strong><i>04</i></span>
+              <span class="card-art"><img src="assets/cards/communication.webp" alt="Perfect Entry YouTube analytics showing audience growth" width="800" height="1000" loading="lazy"></span>
+              <span class="card-type">[ CONTENT / COMMUNITY / TRUST ]</span>
+              <span class="card-rule">Make the complicated thing feel graspable.</span>
+              <span class="card-stats"><b>SUB 16.3K</b><b>COMM 15.9K</b></span>
+            </span></span>
+          </button>
 
-            <button class="room data" type="button" data-room="data" tabindex="-1" aria-controls="roomDetails" aria-expanded="false">
-              <svg class="scene" viewBox="0 0 280 140" role="img" aria-label="A friendly robot works with live data">
-                <path d="M12 28 H268 M12 50 H268 M12 72 H268 M12 94 H268" stroke="#214250" stroke-width="1"/>
-                <path d="M34 111 L61 90 L86 97 L112 69 L137 74 L164 42 L190 53 L215 28" fill="none" stroke="#70dbd2" stroke-width="3" opacity=".55"/>
-                <rect class="data-scan" x="10" y="20" width="260" height="2" fill="#70dbd2" opacity=".5"/>
-                <g transform="translate(22 41)">
-                  <path d="M24 14 V4 M17 4 H31" stroke="#d8ad57" stroke-width="3" stroke-linecap="round"/>
-                  <g class="robot-head">
-                    <rect x="3" y="13" width="43" height="34" rx="8" fill="#bac7cb" stroke="#f3ecdf" stroke-width="2"/>
-                    <rect x="11" y="22" width="27" height="14" rx="5" fill="#071017"/>
-                    <circle class="robot-eye" cx="19" cy="29" r="3" fill="#ff8126"/>
-                    <circle class="robot-eye" cx="31" cy="29" r="3" fill="#ff8126"/>
-                  </g>
-                  <path d="M9 50 Q25 44 41 51 L45 83 H5 Z" fill="#58727a" stroke="#a9bac0" stroke-width="2"/>
-                  <g class="robot-arm">
-                    <path d="M40 58 L66 70 L82 62" fill="none" stroke="#a9bac0" stroke-width="8" stroke-linecap="round"/>
-                    <circle cx="84" cy="61" r="5" fill="#d8ad57"/>
-                  </g>
-                  <path d="M15 83 L12 102 M35 83 L38 102" stroke="#a9bac0" stroke-width="7" stroke-linecap="round"/>
-                </g>
-              </svg>
-              <div class="nixie-bank" id="nixieBank" aria-hidden="true">
-                <span class="nixie">0</span><span class="nixie">1</span><span class="nixie">4</span><span class="nixie">0</span><span class="nixie">0</span><span class="nixie">0</span>
-              </div>
-              <div class="nixie-label" id="nixieLabel">paying customers</div>
-              <span class="room-label"><strong>Data + AI</strong><span>05</span></span>
-            </button>
+          <button class="field-card" type="button" data-card="data" style="--x:44%;--y:43%;--r:-13deg;--z:48" aria-label="Draw the Data and AI card">
+            <span class="portfolio-card data-theme"><span class="card-stock">
+              <span class="card-heading"><strong>Data + AI</strong><i>05</i></span>
+              <span class="card-art"><img src="assets/cards/data-ai.webp" alt="CurrencyAI performance dashboard and equity curve" width="800" height="1000" loading="lazy"></span>
+              <span class="card-type">[ SYSTEM / SIGNAL / DECISION ]</span>
+              <span class="card-rule">Measure the system, not just the applause.</span>
+              <span class="card-stats"><b>65K TESTS</b><b>29 MARKETS</b></span>
+            </span></span>
+          </button>
 
-            <button class="room museum" type="button" data-room="museum" tabindex="-1" aria-controls="roomDetails" aria-expanded="false">
-              <svg class="scene" viewBox="0 0 280 140" role="img" aria-label="A miniature Taylor walks through a museum admiring exhibits">
-                <path class="gallery-glow" d="M36 0 L15 97 H90 L66 0 Z" fill="#f2d58d" opacity=".11"/>
-                <path class="gallery-glow" d="M204 0 L173 97 H260 L232 0 Z" fill="#f2d58d" opacity=".11" style="animation-delay:1.5s"/>
-                <rect x="18" y="21" width="61" height="55" fill="#513b27" stroke="#d8ad57" stroke-width="4"/>
-                <rect x="25" y="28" width="47" height="41" fill="#243c43"/>
-                <path d="M29 63 L43 45 L54 56 L66 36 L70 65 Z" fill="#cf8b4f"/>
-                <circle cx="37" cy="38" r="5" fill="#f2d58d"/>
-                <rect x="198" y="20" width="58" height="59" fill="#4b2b32" stroke="#d8ad57" stroke-width="4"/>
-                <path d="M213 66 Q225 34 241 66" fill="none" stroke="#e0b78d" stroke-width="6"/>
-                <circle cx="227" cy="38" r="8" fill="#d7a77d"/>
-                <path d="M221 31 Q228 22 236 31" fill="#2e2730"/>
-                <g transform="translate(132 24)">
-                  <path d="M18 10 Q30 0 42 10 L38 48 Q30 57 22 48 Z" fill="#c6c1b1"/>
-                  <path d="M20 24 Q30 32 40 24" fill="none" stroke="#766f62" stroke-width="2"/>
-                  <rect x="27" y="49" width="7" height="34" fill="#aaa393"/>
-                  <path d="M12 84 H50 L56 97 H6 Z" fill="#7c7467"/>
-                </g>
-                <g class="museum-taylor" transform="translate(66 70)">
-                  <circle cx="11" cy="8" r="7" fill="#d4976e"/>
-                  <path d="M5 5 Q12 -3 19 4" fill="#241f24"/>
-                  <path d="M4 18 Q12 14 21 19 L23 42 H1 Z" fill="#2e4d68"/>
-                  <g class="museum-arm"><path d="M19 23 L32 15" stroke="#d4976e" stroke-width="5" stroke-linecap="round"/></g>
-                  <g class="museum-leg-a"><path d="M7 42 L4 61" stroke="#343b45" stroke-width="6" stroke-linecap="round"/></g>
-                  <g class="museum-leg-b"><path d="M17 42 L21 61" stroke="#343b45" stroke-width="6" stroke-linecap="round"/></g>
-                  <path d="M3 3 L-1 8 M20 4 L25 7" stroke="#15191f" stroke-width="2"/>
-                  <circle cx="1" cy="8" r="4" fill="none" stroke="#15191f" stroke-width="2"/>
-                  <circle cx="24" cy="8" r="4" fill="none" stroke="#15191f" stroke-width="2"/>
-                  <path d="M5 8 H20" stroke="#15191f" stroke-width="2"/>
-                </g>
-                <path d="M0 130 H280" stroke="#d8ad57" stroke-opacity=".65"/>
-                <circle class="dust" cx="107" cy="31" r="1.5" fill="#f2d58d"/>
-                <circle class="dust" cx="184" cy="48" r="1" fill="#f2d58d" style="animation-delay:2s"/>
-              </svg>
-              <span class="room-label"><strong>Art + History</strong><span>06</span></span>
-            </button>
-          </div>
-
-          <button class="close-book" id="closeBook" type="button">Close the book</button>
+          <button class="field-card" type="button" data-card="heritage" style="--x:76%;--y:48%;--r:8deg;--z:45" aria-label="Draw the Art, History and Place card">
+            <span class="portfolio-card heritage-theme"><span class="card-stock">
+              <span class="card-heading"><strong>Art, History + Place</strong><i>06</i></span>
+              <span class="card-art"><img src="assets/cards/heritage.webp" alt="Taylor Bright at the summit of Arthur's Seat in Edinburgh" width="800" height="1000" loading="lazy"></span>
+              <span class="card-type">[ CURIOSITY / CULTURE / CRAFT ]</span>
+              <span class="card-rule">Understand what makes people care.</span>
+              <span class="card-stats"><b>TYPE HUMAN</b><b>RANGE WIDE</b></span>
+            </span></span>
+          </button>
         </div>
       </div>
     </section>
 
-    <section class="details-shell" id="rooms">
-      <div class="details-intro">
-        <div class="details-aside reveal">
-          <p class="details-kicker">The rooms are playful. The evidence is real.</p>
-          <h2>Choose a room.</h2>
-          <p>Every compartment opens into the work, decisions and measurable outcomes behind the miniature scene.</p>
-        </div>
-
-        <div class="details-panel empty reveal" id="roomDetails" tabindex="-1" aria-live="polite">
-          <div class="empty-state">
-            <span aria-hidden="true">↗</span>
-            Open the head, then select any room. There is no correct order.
+    <section class="case-section" id="caseFile" aria-labelledby="caseTitle">
+      <div class="case-index" aria-hidden="true"><span>CASE FILE</span><b id="caseNumber">—</b></div>
+      <div class="case-panel empty" id="casePanel" aria-live="polite">
+        <div class="case-empty">
+          <span class="empty-card" aria-hidden="true"></span>
+          <div>
+            <p class="eyebrow">Nothing drawn yet</p>
+            <h2 id="caseTitle">Choose a card from the table.</h2>
+            <p>Its story, evidence and measurable outcomes will open here.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="manifesto" aria-labelledby="operating-title">
-      <div class="manifesto-title reveal">
-        <p>Operating system</p>
-        <h2 id="operating-title">A little madness. A lot of method.</h2>
+    <section class="proof-section" aria-labelledby="proofTitle">
+      <div class="proof-heading">
+        <p class="eyebrow">The serious bit</p>
+        <h2 id="proofTitle">Playful interface.<br><em>Accountable outcomes.</em></h2>
       </div>
-      <div class="manifesto-copy">
-        <article class="reveal">
-          <span class="number">01</span>
-          <div>
-            <h3>Reality gets the deciding vote.</h3>
-            <p>I like ambitious ideas, but I test them against customers, commercial outcomes and the physical world. Engineering taught me that elegant theories still have to survive contact with the machine.</p>
-          </div>
-        </article>
-        <article class="reveal">
-          <span class="number">02</span>
-          <div>
-            <h3>Build the system, not just the heroic moment.</h3>
-            <p>Acquisition, reporting, onboarding, retention and team rhythms should keep working after the initial burst of energy. Repeatability is where good intentions become an organisation.</p>
-          </div>
-        </article>
-        <article class="reveal">
-          <span class="number">03</span>
-          <div>
-            <h3>Make serious work memorable.</h3>
-            <p>People engage with things that have character. Whether it is a trading dashboard, a training programme or a visitor experience, clarity and imagination are commercial tools—not decorations.</p>
-          </div>
-        </article>
+      <div class="proof-grid">
+        <article><strong>£100k</strong><span>Peak monthly revenue</span><p>Perfect Entry, built from zero without outside funding.</p></article>
+        <article><strong>14,000</strong><span>Paying customers</span><p>Supported by a 15,000+ member community.</p></article>
+        <article><strong>£18k → £56k</strong><span>Monthly revenue in six months</span><p>Commercial growth at Global Prostate Solutions.</p></article>
+        <article><strong>94%</strong><span>Podium success rate</span><p>Across supported competition vehicles in engineering.</p></article>
       </div>
     </section>
 
-    <section class="contact reveal" id="contact">
-      <div class="contact-inner">
-        <div>
-          <p class="eyebrow">Open to the right challenge</p>
-          <h2>Let’s build something worth opening up.</h2>
-          <p>Based in Essex, open to remote, hybrid and relocation for the right role. I am most useful where commercial thinking, systems, data and creative execution overlap.</p>
-        </div>
-        <div class="contact-actions">
-          <a class="solid-button" href="mailto:Taylorbright0001@gmail.com">Email Taylor</a>
-          <a class="ghost-button" href="taylor-bright-cv.pdf" download>Download the CV</a>
-          <button class="evidence-button" type="button" data-open-evidence>Open evidence mode</button>
-        </div>
+    <section class="contact-section" id="contact">
+      <p class="eyebrow">The next draw</p>
+      <h2>Give me an ambitious problem<br><em>with moving parts.</em></h2>
+      <p>Based in Essex. Open to roles where commercial thinking, systems, data and creative execution overlap.</p>
+      <div class="contact-actions">
+        <a class="primary-button" href="mailto:Taylorbright0001@gmail.com">Email Taylor <span aria-hidden="true">↗</span></a>
+        <a class="secondary-button" href="taylor-bright-cv.pdf" target="_blank" rel="noreferrer">View conventional CV</a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <span>© 2026 Taylor Bright</span>
-    <span>Built like a cabinet of curiosities. Measured like a business.</span>
-  </footer>
+  <aside class="hand" id="hand" aria-label="Your collected portfolio cards">
+    <div class="hand-label"><span>YOUR HAND</span><b id="handCount">0 / 7</b></div>
+    <div class="hand-fan" id="handFan"></div>
+  </aside>
 
   <dialog class="evidence-dialog" id="evidenceDialog" aria-labelledby="evidenceTitle">
-    <div class="evidence-inner">
-      <button class="dialog-close" id="closeEvidence" type="button" aria-label="Close evidence mode">×</button>
-      <div class="evidence-head">
-        <p class="eyebrow">Evidence mode</p>
-        <h2 id="evidenceTitle">The recruiter-friendly version.</h2>
-        <p>The same person, with the hinges and tiny mechanics temporarily removed.</p>
-      </div>
-
-      <div class="evidence-stats">
-        <div class="evidence-stat"><strong>£100k</strong><span>Peak monthly revenue built from zero</span></div>
-        <div class="evidence-stat"><strong>14,000</strong><span>Lifetime paying customers</span></div>
-        <div class="evidence-stat"><strong>£18k→£56k</strong><span>Monthly revenue in six months</span></div>
-        <div class="evidence-stat"><strong>94%</strong><span>Podium success in competition engineering</span></div>
-      </div>
-
-      <div class="evidence-grid">
-        <section>
-          <h3>Experience</h3>
-          <div class="timeline">
-            <article class="timeline-item">
-              <time>2020—Now</time>
-              <div>
-                <h4>Founder / Commercial Director · Perfect Entry</h4>
-                <p>Built a global trading education and analytics business from zero to approximately £100k peak monthly revenue, 14,000 paying customers and communities exceeding 15,000 people.</p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <time>2025</time>
-              <div>
-                <h4>Business Development Manager · Global Prostate Solutions</h4>
-                <p>Helped grow monthly revenue from approximately £18k to £56k in six months, opened the first sales in India, rebuilt acquisition and scaled the commercial team.</p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <time>2024—2025</time>
-              <div>
-                <h4>Commercial Development · Mather Engineering</h4>
-                <p>Developed automotive machining partnerships and opened a new commercial line for a precision engineering company.</p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <time>2016—2020</time>
-              <div>
-                <h4>Engineering &amp; Operations · Black Art Designs / Austin Motor Company</h4>
-                <p>Vehicle dynamics, prototype programmes and operational delivery in high-performance environments, with a 94% podium success rate across supported competition vehicles.</p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <time>2026</time>
-              <div>
-                <h4>BSc Economics · University of Essex</h4>
-                <p>Behavioural finance, market structure and quantitative research, combined with years of practical commercial execution.</p>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <aside>
-          <h3>Capabilities</h3>
-          <ul class="capability-list">
-            <li>Commercial strategy</li>
-            <li>Growth systems</li>
-            <li>Leadership</li>
-            <li>Revenue operations</li>
-            <li>Go-to-market</li>
-            <li>Partnerships</li>
-            <li>Data analysis</li>
-            <li>AI workflows</li>
-            <li>Content</li>
-            <li>Visitor thinking</li>
-            <li>Engineering</li>
-            <li>Experiment design</li>
-          </ul>
-
-          <h3>Links</h3>
-          <div class="evidence-actions">
-            <a class="solid-button" href="taylor-bright-cv.pdf" download>Download CV</a>
-            <a class="ghost-button" href="https://perfectentry.store" target="_blank" rel="noreferrer">Perfect Entry ↗</a>
-            <a class="ghost-button" href="https://www.youtube.com/@perfectentrytrading" target="_blank" rel="noreferrer">YouTube ↗</a>
-            <a class="ghost-button" href="mailto:Taylorbright0001@gmail.com">Email Taylor</a>
-            <button class="ghost-button" id="printEvidence" type="button">Print this view</button>
-          </div>
-        </aside>
-      </div>
+    <button class="dialog-close" id="closeEvidence" type="button" aria-label="Close evidence mode">×</button>
+    <div class="evidence-head">
+      <p class="eyebrow">Recruiter evidence mode</p>
+      <h2 id="evidenceTitle">Taylor Bright, without the shuffle.</h2>
+      <p>A concise view of the claims behind the cards.</p>
+    </div>
+    <div class="evidence-stats">
+      <div><strong>£100k</strong><span>Peak monthly revenue</span></div>
+      <div><strong>14,000</strong><span>Paying customers</span></div>
+      <div><strong>£18k → £56k</strong><span>Revenue growth in six months</span></div>
+      <div><strong>94%</strong><span>Podium success</span></div>
+    </div>
+    <div class="evidence-timeline">
+      <article><time>2020—Now</time><div><h3>Founder · Perfect Entry</h3><p>Built the offer, acquisition, content, community, analytics and operating systems behind a digital trading education business.</p></div></article>
+      <article><time>2025</time><div><h3>Business Development · Global Prostate Solutions</h3><p>Grew monthly revenue from approximately £18k to £56k, expanded the team from three to nine and opened initial sales in India.</p></div></article>
+      <article><time>2024—25</time><div><h3>Commercial Development · Mather Engineering</h3><p>Developed partnerships and a new commercial line in automotive machining.</p></div></article>
+      <article><time>2016—20</time><div><h3>Engineering · Black Art Designs</h3><p>Vehicle dynamics, suspension development and competition support, with a 94% podium rate across supported vehicles.</p></div></article>
+      <article><time>2026</time><div><h3>BSc Economics · University of Essex</h3><p>Final-year study alongside continuing product, analytics and commercial work.</p></div></article>
+    </div>
+    <div class="evidence-actions">
+      <a class="primary-button" href="taylor-bright-cv.pdf" target="_blank" rel="noreferrer">Open CV</a>
+      <a class="secondary-button" href="mailto:Taylorbright0001@gmail.com">Email Taylor</a>
+      <button class="secondary-button" id="printEvidence" type="button">Print evidence</button>
     </div>
   </dialog>
 
-  <noscript>
-    <div style="position:fixed;z-index:9999;right:1rem;bottom:1rem;max-width:26rem;padding:1rem;background:#f3ecdf;color:#070b12">
-      This portfolio’s miniature rooms need JavaScript to open. The downloadable CV remains available at the top of the page.
-    </div>
-  </noscript>
+  <div class="sr-status" id="srStatus" aria-live="polite"></div>
+  <noscript><p class="noscript">JavaScript brings the deck to life. Taylor’s <a href="taylor-bright-cv.pdf">conventional CV remains available here</a>.</p></noscript>
 </body>
 </html>
