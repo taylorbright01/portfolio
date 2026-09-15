@@ -30,7 +30,7 @@
       metrics: [
         ["94%", "Podium success across supported competition vehicles"],
         ["4 years", "Engineering and operational experience"],
-        ["Prototype", "Work touching nationally significant vehicle programmes"]
+        ["Prototype", "Work touching nationally significant vehicle programmes such as the LEVC london taxi"]
       ],
       notes: [
         ["Black Art Designs / Austin Motor Company", "Progressed from apprentice into broader engineering and operational responsibility across suspension development, vehicle dynamics and competition support."],
@@ -45,8 +45,8 @@
       summary: "I have led from the uncomfortable middle: owning the outcome while the process, team and resources are still being built. My approach is direct, transparent and grounded in shared measures rather than performative busyness.",
       metrics: [
         ["£18k → £56k", "Monthly revenue growth in six months"],
-        ["3 → 9", "Commercial team expansion"],
-        ["India", "First sales opened in a new international market"]
+        ["3 → 9", "team expansion at Global Prostate Solutions"],
+        ["India", "First sales opened in a new international market for Global Prostate Solutions"]
       ],
       notes: [
         ["Turning activity into a system", "At Global Prostate Solutions I introduced reporting across marketing, sales and distributor activity, removed weak paid acquisition and helped build a team that could see what was working."],
@@ -57,10 +57,10 @@
     experimentation: {
       number: "03",
       label: "Experimentation",
-      title: "Test the strange idea until it earns the right to stay.",
+      title: "Testing the strange idea until it earns the right to stay.",
       summary: "Competitive card play and building companies reward the same honest habit: understand the field, choose a line, watch what actually happens and rebuild without becoming emotionally attached to the first version.",
       metrics: [
-        ["Regionals", "Competitive Yu-Gi-Oh experience"],
+        ["A lifetime spent dreaming, testing and realising"],
         ["£0", "Outside funding used to build Perfect Entry"],
         ["£100k", "Peak monthly revenue after repeated market testing"]
       ],
@@ -73,16 +73,16 @@
     communication: {
       number: "04",
       label: "Communication",
-      title: "Make the complicated thing feel graspable.",
-      summary: "Communication is not a layer added after the work. It is how strategy becomes coordinated action and how technical information becomes useful enough for customers, colleagues and partners to trust.",
+      title: "Making the complicated thing feel graspable.",
+      summary: "Communication is not a layer added after the work. It is how strategy becomes coordinated actions and how technical information becomes useful enough for customers, colleagues and partners to trust.",
       metrics: [
         ["16,300+", "YouTube subscribers built organically"],
         ["15,900+", "Community members"],
-        ["14,000", "Lifetime paying customers"]
+        ["14,000", "individual paying customers"]
       ],
       notes: [
         ["Content that teaches", "I built an acquisition engine by turning technical market ideas into explanations people could use, without stripping away every caveat or treating the audience as a conversion statistic."],
-        ["Across a room or a market", "My experience ranges from video, customer communities and support to engineering partnerships, distributor relationships and helping secure initial sales in India."]
+        ["Across a room or a market", "My experience ranges from video, customer communities and support to engineering partnerships, distributor relationships and helping secure initial sales in international markets."]
       ],
       links: [["YouTube channel", "https://www.youtube.com/@perfectentrytrading", false], ["Email Taylor", "mailto:Taylorbright0001@gmail.com", false]]
     },
@@ -92,7 +92,7 @@
       title: "Measure the system, not just the applause.",
       summary: "I use data to expose weak assumptions and build repeatable decisions. The interesting part is rarely the dashboard itself; it is the chain from a noisy event to an action someone can trust and later audit.",
       metrics: [
-        ["65,000+", "Strict causal backtested trades examined"],
+        ["108,000+", "Strict causal backtested trades examined"],
         ["29", "Markets handled by the analytics system"],
         ["Immutable", "Decision and outcome records for later auditing"]
       ],
@@ -100,16 +100,16 @@
         ["CurrencyAI", "Built a pipeline linking TradingView, Supabase, approval logic, shadow collection, webhooks and trade execution. Both accepted and rejected decisions remain available for counterfactual analysis."],
         ["Commercial instrumentation", "I build KPI frameworks around the actual constraint—conversion, channel quality, distributor performance, retention or throughput—then remove work that cannot justify itself."]
       ],
-      links: [["Live market data", "https://perfectentry.store/reversalsniperdata", false], ["Session screener", "https://perfectentry.store/whats-tradable-now", false]]
+      links: [["Live system data", "https://perfectentry.store/currencyai.html", false], ["counterfactual analysis", "https://perfectentry.store/counterfactual.html", false]]
     },
     heritage: {
       number: "06",
       label: "Art, History + Place",
       title: "Understand what makes people care.",
-      summary: "I love art, history and British heritage because they contain systems, craft, argument and human stories. I am interested in how institutions turn those things into experiences people remember, discuss and return to.",
+      summary: "I love art, history and everything nature because they contain systems, craft, argument and human stories and interactions. I am interested in how institutions turn those things into experiences people remember, discuss and return to.",
       metrics: [
         ["3+ sectors", "Fintech, medtech and engineering experience"],
-        ["BSc", "Economics at the University of Essex"],
+        ["BSc, first class", "Economics at the University of Essex"],
         ["One public", "Every visitor, viewer and customer is a real person"]
       ],
       notes: [
