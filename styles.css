@@ -397,21 +397,13 @@ img {
 }
 
 .stack-card {
-  border: 1px solid rgba(218,184,137,0.78);
+  border: 1px solid rgba(238,215,177,0.92);
   border-radius: 5.7% / 4.2%;
   background: #b8895d url("assets/cards/card-back.webp") center / cover no-repeat;
-  box-shadow: inset 0 0 0 1px rgba(48,24,16,0.72), 0 2px 0 rgba(46,24,17,0.9), 0 5px 10px rgba(0,0,0,0.34);
+  box-shadow: none;
   transform: translate3d(var(--sx), var(--sy), var(--sz));
   transform-origin: 50% 55%;
   will-change: transform, opacity;
-}
-
-.stack-card:nth-child(3n) {
-  filter: brightness(0.92);
-}
-
-.stack-card:nth-child(3n + 1) {
-  filter: brightness(1.04);
 }
 
 .stack-card.cascade {
