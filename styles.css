@@ -376,19 +376,6 @@ img {
   transform: rotateX(62deg) rotateZ(-8deg) translateY(-1rem);
 }
 
-.deck-shadow {
-  position: absolute;
-  z-index: -4;
-  right: -20%;
-  bottom: -15%;
-  left: -20%;
-  height: 35%;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.72);
-  filter: blur(28px);
-  transform: translateZ(-60px) rotateX(72deg);
-}
-
 .deck-stack,
 .stack-card,
 .identity-card {
@@ -397,7 +384,7 @@ img {
 }
 
 .stack-card {
-  border: 1px solid rgba(238,215,177,0.92);
+  border: 1px solid #b7875a;
   border-radius: 5.7% / 4.2%;
   background: #b8895d url("assets/cards/card-back.webp") center / cover no-repeat;
   box-shadow: none;
@@ -843,7 +830,7 @@ img {
   aspect-ratio: 59 / 86;
   border: 1px solid rgba(0,0,0,0.65);
   border-radius: 5.7% / 4.2%;
-  opacity: var(--opacity, 0.84);
+  opacity: 1;
   background: #b8895d url("assets/cards/card-back.webp") center / cover no-repeat;
   box-shadow: 0 10px 22px -10px rgba(0,0,0,0.68);
   transform: rotate(var(--r));
@@ -1527,7 +1514,7 @@ img {
 
   .filler-card {
     width: clamp(80px, 25vw, 116px);
-    opacity: 0.62;
+    opacity: 1;
   }
 
   .case-section {
