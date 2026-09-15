@@ -425,14 +425,14 @@ img {
   padding: 0;
   cursor: pointer;
   background: transparent;
-  transform: translate3d(0, -2px, 35px);
+  transform: translate3d(0, 0, 2px);
   transform-style: preserve-3d;
   transition: transform 520ms cubic-bezier(.2,.8,.2,1), filter 300ms ease, opacity 250ms ease;
 }
 
 .identity-card:hover {
   filter: brightness(1.04);
-  transform: translate3d(0, -15px, 48px) rotateZ(1.5deg);
+  transform: translate3d(0, -5px, 8px) rotateZ(0.6deg);
 }
 
 .identity-card:focus-visible,
@@ -1431,29 +1431,25 @@ img {
     opacity: 1;
     transform: translate3d(var(--sx), var(--sy), var(--sz)) rotate(0deg);
   }
-  18% {
+  22% {
     opacity: 1;
-    transform: translate3d(var(--sx), calc(var(--sy) + 16px), 30px) rotate(0deg);
+    transform: translate3d(var(--sx), calc(var(--sy) + var(--release-y)), var(--sz)) rotate(var(--spin-release));
   }
-  38% {
+  50% {
     opacity: 1;
-    transform: translate3d(calc(var(--sx) + var(--drift-catch)), 22vh, 18px) rotate(var(--spin-catch));
+    transform: translate3d(var(--drift-early), 72vh, 0) rotate(var(--spin-early));
   }
-  68% {
+  76% {
     opacity: 1;
-    transform: translate3d(var(--drift-mid), 88vh, 4px) rotate(var(--spin-mid));
+    transform: translate3d(var(--drift-mid), 138vh, 0) rotate(var(--spin-mid));
   }
-  88% {
-    opacity: 0.56;
-    transform: translate3d(var(--drift-late), 150vh, 0) rotate(var(--spin-late));
-  }
-  96% {
-    opacity: 0;
-    transform: translate3d(var(--drift), 190vh, 0) rotate(var(--spin));
+  92% {
+    opacity: 0.42;
+    transform: translate3d(var(--drift-late), 196vh, 0) rotate(var(--spin-late));
   }
   100% {
     opacity: 0;
-    transform: translate3d(var(--drift), 205vh, 0) rotate(var(--spin));
+    transform: translate3d(var(--drift), 230vh, 0) rotate(var(--spin));
   }
 }
 
