@@ -147,8 +147,8 @@
       const duration = 1750 + ((index % 6) * 95);
 
       card.className = "stack-card";
-      card.style.setProperty("--sx", ((index % 4) * 0.7) + "px");
-      card.style.setProperty("--sy", ((index % 7) * 0.72) + "px");
+      card.style.setProperty("--sx", ((index * 0.07) + ((index % 3) * 0.12)) + "px");
+      card.style.setProperty("--sy", ((index * 0.62) + ((index % 4) * 0.1)) + "px");
       card.style.setProperty("--sz", (-index * 1.35) + "px");
       card.style.setProperty("--drift", drift + "px");
       card.style.setProperty("--drift-catch", (drift * 0.06) + "px");

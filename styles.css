@@ -369,11 +369,11 @@ img {
 }
 
 .deck-stage:hover .deck-scene {
-  transform: rotateX(57deg) rotateZ(-7deg) translateY(-1.35rem);
+  transform: rotateX(62deg) rotateZ(-8deg) translateY(-1.35rem);
 }
 
 .hero.is-dealt .deck-scene {
-  transform: rotateX(15deg) rotateZ(-3deg) translateY(1rem);
+  transform: rotateX(62deg) rotateZ(-8deg) translateY(-1rem);
 }
 
 .deck-shadow {
@@ -397,17 +397,25 @@ img {
 }
 
 .stack-card {
-  border: 1px solid rgba(12,9,7,0.7);
+  border: 1px solid rgba(218,184,137,0.78);
   border-radius: 5.7% / 4.2%;
   background: #b8895d url("assets/cards/card-back.webp") center / cover no-repeat;
-  box-shadow: 0 4px 9px rgba(0,0,0,0.34);
+  box-shadow: inset 0 0 0 1px rgba(48,24,16,0.72), 0 2px 0 rgba(46,24,17,0.9), 0 5px 10px rgba(0,0,0,0.34);
   transform: translate3d(var(--sx), var(--sy), var(--sz));
   transform-origin: 50% 55%;
   will-change: transform, opacity;
 }
 
+.stack-card:nth-child(3n) {
+  filter: brightness(0.92);
+}
+
+.stack-card:nth-child(3n + 1) {
+  filter: brightness(1.04);
+}
+
 .stack-card.cascade {
-  animation: waterfall var(--duration) cubic-bezier(.48,.02,.88,.5) var(--delay) forwards;
+  animation: waterfall var(--duration) cubic-bezier(.38,.02,.9,.48) var(--delay) forwards;
 }
 
 .identity-card {
@@ -1429,19 +1437,23 @@ img {
   }
   38% {
     opacity: 1;
-    transform: translate3d(calc(var(--sx) + var(--drift-catch)), 18vh, 18px) rotate(var(--spin-catch));
+    transform: translate3d(calc(var(--sx) + var(--drift-catch)), 22vh, 18px) rotate(var(--spin-catch));
   }
   68% {
     opacity: 1;
-    transform: translate3d(var(--drift-mid), 62vh, 4px) rotate(var(--spin-mid));
+    transform: translate3d(var(--drift-mid), 88vh, 4px) rotate(var(--spin-mid));
   }
   88% {
-    opacity: 1;
-    transform: translate3d(var(--drift-late), 101vh, 0) rotate(var(--spin-late));
+    opacity: 0.56;
+    transform: translate3d(var(--drift-late), 150vh, 0) rotate(var(--spin-late));
+  }
+  96% {
+    opacity: 0;
+    transform: translate3d(var(--drift), 190vh, 0) rotate(var(--spin));
   }
   100% {
     opacity: 0;
-    transform: translate3d(var(--drift), 126vh, 0) rotate(var(--spin));
+    transform: translate3d(var(--drift), 205vh, 0) rotate(var(--spin));
   }
 }
 
